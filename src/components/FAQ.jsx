@@ -35,7 +35,7 @@ const FAQ = () => {
                         }  rounded-2xl flex items-center  justify-between w-full px-4 py-6 text-left`}
                       >
                         <span className="flex-1 flex items-center md:items-start  gap-2 font-medium text-[32px] xl:text-[22px] md:text-sm ">
-                          <Icon className="text-3xl xl:text-lg md:text-[8px]" icon="raphael:quote" />
+                          <Icon className="text-xl xl:text-lg lg:text-base md:text-[8px]" icon="raphael:quote" />
                           {data.title}
                         </span>
                         <span className="flex justify-center items-center">

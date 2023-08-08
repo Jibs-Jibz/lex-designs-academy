@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../../public/images/paul.png";
 import Image from "next/image";
 import Button1 from "../buttons/Button1";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Section1 = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500, // Animation duration in milliseconds
+      delay: 200, // Delay between animations in milliseconds
+      once: false, // Whether to animate elements only once
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className="flex mb-20 flex-col w-full justify-center items-center gap-60 xl:gap-40 lg:gap-32 md:gap-20">
       <main className=" flex lg:flex-col  gap-y-12 md:gap-y-10 gap-x-12 items-center justify-center w-full  ">
@@ -44,7 +54,10 @@ const Section1 = () => {
           />
         </div>{" "}
       </main>
-      <div className=" flex flex-col items-center gap-10 md:gap-6 max-w-[665px] w-full ">
+      <div
+        data-aos="fade-up"
+        className=" flex flex-col items-center gap-10 md:gap-6 max-w-[665px] w-full "
+      >
         <h2 className="text-lexPrimary text-[45px] lg:text-[32px] md:text-[24px] text-center font-bold ">
           Are you Ready To Take that First Step?{" "}
         </h2>

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import ScrollspyNav from "react-scrollspy-nav";
-
+import TransitionEffect from "@/components/TransitionEffect";
+import React from "react";
 const privacy = () => {
   return (
     <>
+      <TransitionEffect />
       <div className="dark:text-white flex flex-col gap-16 pt-[140px] px-4 sm:px-8 md:px-6 lg:px-20 text-mBillerDarkPurple relative overflow-">
         <h1
           className="text-[30px] text-lexPrimary uppercase font-bold text-center"

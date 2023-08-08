@@ -3,6 +3,9 @@ import img from "../../../public/images/section3.png";
 import Image from "next/image";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
 
@@ -27,6 +30,14 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const Section3 = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500, // Animation duration in milliseconds
+      delay: 200, // Delay between animations in milliseconds
+      once: false, // Whether to animate elements only once
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className="relative">
       <div className=" absolute left-0 top-1/2 bottom-1/2 -translate-x-[100%] -translate-y-1/2 z-0 bg-lexPrimary w-[90px] lg:w-[50px] h-[377px] lg:h-[277px] " />
@@ -42,7 +53,9 @@ const Section3 = () => {
             guiding and inspiring students making their learning journey truly
             exceptional
           </p>
-          <div className=" dark:text-black shadow-xl flex flex-wrap gap-y-[32px]  gap-x-[70px] xl:gap-x-[50px] lg:gap-x-[43px] md:gap-x-[32px] justify-between  px-[50px] xl:px-[34px] py-[30px] xl:py-[23px] : w-fit bg-lexAccent rounded-[10px] shadow-lex-num-count ">
+          <div
+              data-aos="fade-up"
+           className=" dark:text-black shadow-xl flex flex-wrap gap-y-[32px]  gap-x-[70px] xl:gap-x-[50px] lg:gap-x-[43px] md:gap-x-[32px] justify-between  px-[50px] xl:px-[34px] py-[30px] xl:py-[23px] : w-fit bg-lexAccent rounded-[10px] shadow-lex-num-count ">
             <div className=" flex flex-col w-fit xs:mx-auto ">
               <span className=" text-[45px] xl:text-[32px] md:text-[21px] font-semibold  ">
                 <AnimatedNumbers value={50} />+{" "}
@@ -74,6 +87,7 @@ const Section3 = () => {
           <div className=" lg:hidden absolute right-0 bottom-0 z-20 w-full lg:max-w-[425px] xl:max-w-[494px]  max-w-[594px] cs1:-mr-20 lg:-mr-40 ">
             <Image
               src={img}
+              data-aos="fade-up"
               alt="lex-designs"
               className=" w-full object-cover h-auto  md:hidden "
               priority

@@ -1,11 +1,24 @@
 import { Icon } from "@iconify/react";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration in milliseconds
+      delay: 200, // Delay between animations in milliseconds
+      once: false, // Whether to animate elements only once
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div className=" flex flex-col gap-20 xl:gap-16 lg:gap-14 md:gap-8 ">
       <div className="bg-center bg-cover bg-blend-multiply  bg-no-repeat bg-contactHeader  text-white flex items-center justify-center  py-[200px] lg:py-[130px] px-2 md:py-[150px] xs:py-[90px] ">
-        <p className=" max-w-[802px] w-full text-center font-semibold text-[45px] lg:text-[30px]  md:text-[20px] ">
+        <p
+          data-aos="fade-up"
+          className=" max-w-[802px] w-full text-center font-semibold text-[45px] lg:text-[30px]  md:text-[20px] "
+        >
           Don&lsquo;t hesitate to get in touch with us. We&lsquo;re here to
           assist you.
         </p>

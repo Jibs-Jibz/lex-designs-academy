@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../../public/images/about-header-bg.png";
 import bgDesign from "../../../public/images/about-section5.png";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Header = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500, // Animation duration in milliseconds
+      delay: 200, // Delay between animations in milliseconds
+      once: false, // Whether to animate elements only once
+    });
+    AOS.refresh();
+  }, []);
   return (
     <header className=" flex flex-col  w-full gap-14 ">
       <div className=" flex flex-col gap-14 ">
@@ -16,7 +26,10 @@ const Header = () => {
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
           />
         </div>
-        <div className="  w-full flex flex-col gap-8 items-center justify-center text-center ">
+        <div
+          data-aos="fade-up"
+          className="  w-full flex flex-col gap-8 items-center justify-center text-center "
+        >
           <h1 className="text-lexPrimary text-6xl lg:text-[42px]  md:text-[36px] font-semibold ">
             About Us
           </h1>

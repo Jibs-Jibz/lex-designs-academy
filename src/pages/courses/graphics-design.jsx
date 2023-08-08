@@ -10,6 +10,8 @@ import Section3 from "@/components/home/Section3";
 import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Reviews from "@/components/Reviews";
+
+import TransitionEffect from "@/components/TransitionEffect";
 const GraphicsDesign = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => {
@@ -22,6 +24,7 @@ const GraphicsDesign = () => {
 
   return (
     <>
+      <TransitionEffect />
       <Layout>
         <div className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
           {GRAPHICSDESIGNDATA.map((element, index) => (

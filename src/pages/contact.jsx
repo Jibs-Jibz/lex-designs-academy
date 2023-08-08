@@ -1,3 +1,4 @@
+import TransitionEffect from '@/components/TransitionEffect'
 import Header from '@/components/comtact/Header'
 import Section1 from '@/components/comtact/Section1'
 import Layout from '@/layouts/Layout'
@@ -13,6 +14,7 @@ const contact = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <TransitionEffect />
     <Layout>
       <main className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 " >
         <Header />

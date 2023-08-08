@@ -1,5 +1,4 @@
 import React from "react";
-import Button1 from "../buttons/Button1";
 import { Icon } from "@iconify/react";
 
 const Header = ({ element, index, className = "", openModal }) => {

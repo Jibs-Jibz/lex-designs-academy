@@ -1,6 +1,7 @@
 import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Reviews from "@/components/Reviews";
+import TransitionEffect from "@/components/TransitionEffect";
 import Header from "@/components/home/Header";
 import Section1 from "@/components/home/Section1";
 import Section2 from "@/components/home/Section2";
@@ -20,6 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <TransitionEffect />
       <Layout>
         <main className=" flex flex-col gap-32 xl:gap-24 lg:gap-20  ">
           <Header />
