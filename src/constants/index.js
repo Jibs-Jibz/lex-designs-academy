@@ -269,7 +269,7 @@ export const DIGITALARTSDATA = [
             "Supportive community",
             "Certificate of completion",
         ],
-        coursePrice: "40,000",
+        coursePrice: "20,000",
         courseOverview: "This course will teach you how to make digital art . You'll learn about the various tools and the many features it has to offer. We will provide a basic explanation of the steps involved in creating digital artwork along with simple and understandable examples to make it easy to follow through. We provide all of the insights you need to create unique and beautiful digital artworks",
         courseContent: [
             {
