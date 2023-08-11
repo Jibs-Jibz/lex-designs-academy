@@ -27,7 +27,7 @@ const Section1 = ({ element, index, openModal }) => {
           <h3 className=" font-semibold text-[42px]  xl:text-[32px] lg:text-[28px] md:text-[20px]">
             Course overview
           </h3>
-          <p className=" leading-[47px] lg:leading-6   text-[24px] xl:text-xl lg:text-base md:text-sm flex gap-3 md:gap-2 items-center ">
+          <p className=" leading-[47px] lg:leading-6 md:leading-relaxed  text-[24px] xl:text-xl lg:text-base md:text-sm flex gap-3 md:gap-2 items-center ">
             {element.courseOverview}
           </p>
         </div>

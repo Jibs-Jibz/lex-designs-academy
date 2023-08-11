@@ -28,13 +28,16 @@ const Header = () => {
         <h2 className="font-semibold text-[45px] lg:text-[30px]  md:text-[20px]">
           Contact Details
         </h2>
-        <div className="  xxs:flex-wrap xxs:gap-x-2 xxs:justify-center w-full h-full max-w-[874px] lg:max-w-[550px] flex  justify-between   ">
-          <div className=" flex gap-[15px] xs:gap-2 w-fit py-5  ">
-            <div className=" text-[44px] lg:text-[33px] md:text-2xl xs:text-xl flex items-center   ">
+        <div className="  xxs:flex-wrap xxs:gap-x-3  xxxs:justify-center w-full h-full max-w-[874px] md:max-w-[550px] flex  justify-between   ">
+          <div className=" flex gap-[15px] xs:gap-2 w-fit 3xs:w-full py-5  ">
+            <div className="md:hidden text-[44px] lg:text-[33px] md:text-2xl xs:text-xl flex items-center   ">
               <Icon icon="mdi:call" />
             </div>
-            <div className=" flex flex-col gap-5 sm:gap-3  ">
-              <h3 className=" text-[28px] lg:text-[20px] md:text-base xs:text-sm font-medium ">
+            <div className=" flex flex-col items-end 3xs:items-center 3xs:w-full gap-5 sm:gap-3  ">
+              <h3 className="flex gap-1 text-[28px] lg:text-[20px] md:text-base xs:text-sm font-medium ">
+                <div className="md:flex hidden md:text-2xl xs:text-xl items-center" >
+                  <Icon icon="mdi:call" />
+                </div>
                 Phone Number
               </h3>
               <a
@@ -45,13 +48,16 @@ const Header = () => {
               </a>
             </div>
           </div>
-          <div className=" w-[4px] bg-[#EBEBEB] py-5 xxs:hidden " />
-          <div className="flex gap-[15px] xs:gap-2 w-fit py-5">
-            <div className=" text-[44px] lg:text-[33px] md:text-2xl xs:text-xl flex items-center  ">
+          <div className=" w-[4px] xxs:w-[2px] bg-[#EBEBEB] py-5 3xs:hidden xxxs:hidden " />
+          <div className="flex gap-[15px] xs:gap-2 w-fit 3xs:w-full py-5">
+            <div className=" md:hidden text-[44px] lg:text-[33px] md:text-2xl xs:text-xl flex items-center  ">
               <Icon icon="mdi:email" />
             </div>
-            <div className=" flex flex-col gap-5 sm:gap-3  ">
-              <h3 className=" text-[28px] lg:text-[20px] md:text-base xs:text-sm font-medium ">
+            <div className=" flex flex-col items-end 3xs:items-center 3xs:w-full gap-5 sm:gap-3  ">
+              <h3 className="flex gap-1 text-[28px] lg:text-[20px] md:text-base xs:text-sm font-medium ">
+              <div className="md:flex hidden md:text-2xl xs:text-xl items-center" >
+                  <Icon icon="mdi:email" />
+                </div>
                 Email Address
               </h3>
               <a

@@ -12,9 +12,16 @@ import FAQ from "@/components/FAQ";
 import Newsletter from "@/components/Newsletter";
 import Reviews from "@/components/Reviews";
 import TransitionEffect from "@/components/TransitionEffect";
+import PaymentForm from "@/components/modals/PaymentForm";
 
 const DigitalArt = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
+  
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -23,13 +30,16 @@ const DigitalArt = () => {
     setIsModalOpen(false);
   };
 
+
   return (
     <>
       <TransitionEffect />
       <Layout>
         <div className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
           {DIGITALARTSDATA.map((element, index) => (
-            <>
+            <div key={index}>
+              {" "}
+              {/* Wrap each group of components in a container */}
               <Header
                 className="!bg-courseBgDigital"
                 element={element}
@@ -39,9 +49,17 @@ const DigitalArt = () => {
               <Section1 openModal={openModal} element={element} index={index} />
               <Section2 openModal={openModal} element={element} index={index} />
               <Modal isOpen={isModalOpen} onClose={closeModal}>
-                <PaymentModal element={element} index={index} />
+                {currentIndex === index ? (
+                  <PaymentForm
+                    onNext={handleNext}
+                    element={element}
+                    index={index}
+                  />
+                ) : (
+                  <PaymentModal element={element} index={index} />
+                )}
               </Modal>
-            </>
+            </div>
           ))}
           <Section3 />
           <FAQ />

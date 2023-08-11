@@ -27,7 +27,7 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().trim().required("Message is required"),
 });
 
-const CircleLoader = () => {
+export const CircleLoader = () => {
   return (
     <div className=" flex w-fit items-center self-center mx-auto ">
       <div role="status">

@@ -22,46 +22,46 @@ export const COURSES = [
         img: "/images/section2-1.png",
         title: "UIUX design",
         text: "We offer a comprehensive curriculum that covers all aspects of product design to enable students create exceptional user experiences in the digital realm. ",
-        path: "/",
+        path: "/courses/ui-ux-design",
     },
     {
         img: "/images/section2-2.png",
         title: "Graphics design",
         text: "We equip students with the skills and knowledge to bring your creative visions to life and develop a strong technical foundation in graphics design. ",
-        path: "/",
+        path: "/courses/graphics-design",
     },
     {
         img: "/images/section2-3.png",
         title: "Digital art",
         text: "We help unleash your different creativity, refine your skills, and also help you create captivating digital masterpieces that leaves a lasting impression.",
-        path: "/",
+        path: "/courses/digital-art",
     },
 ]
 
 export const FAQDATA = [
     {
         title: "What makes Lex academy unique from others",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate id magnam facilis ut eius distinctio commodi voluptas reprehenderit! Iusto aperiam quaerat quam aliquam architecto iure nam nihil dolore vero perspiciatis!",
+        desc: " At Lex Academy, our distinct approach to education sets us apart from the rest. With a commitment to excellence and innovation, we have crafted a learning environment as we believe in nurturing not only academic prowess but also personal growth. Our curriculum is designed to foster critical thinking, creativity, emotional intelligence, and practical skills, ensuring that our students are well-rounded individuals prepared for the complexities in the modern world. ",
     },
     {
         title: "What program and courses do you offer",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate id magnam facilis ut eius distinctio commodi voluptas reprehenderit! Iusto aperiam quaerat quam aliquam architecto iure nam nihil dolore vero perspiciatis!",
+        desc: "At our institution, we take pride in offering a diverse range of programs and courses designed to cater to a wide spectrum of interests, skills, and career aspirations. Our commitment to academic excellence and holistic development is reflected in the following program offering: a 3-month program encompassing courses in UI/UX, graphic design, and digital art. ",
     },
     {
         title: "What resources and facilities are accessible to students?",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate id magnam facilis ut eius distinctio commodi voluptas reprehenderit! Iusto aperiam quaerat quam aliquam architecto iure nam nihil dolore vero perspiciatis!",
+        desc: " Engaging and interactive modules that cover a wide range of topics, offering multimedia content, quizzes, and assessments to reinforce understanding, High-quality video lectures delivered by expert instructors, providing in-depth explanations and visual demonstrations of key concepts as well as access to various resources related to the chosen course field as well as career development resources, including resume building, interview preparation, and networking opportunities to assist students in achieving their professional goals.  ",
     },
     {
         title: "How much does each course cost?",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate id magnam facilis ut eius distinctio commodi voluptas reprehenderit! Iusto aperiam quaerat quam aliquam architecto iure nam nihil dolore vero perspiciatis!",
+        desc: "Engaging and interactive modules that cover a wide range of topics, offering multimedia content, quizzes, and assessments to reinforce understanding, High-quality video lectures delivered by expert instructors, providing in-depth explanations and visual demonstrations of key concepts as well as access to various resources related to the chosen course field as well as career development resources, including resume building, interview preparation, and networking opportunities to assist students in achieving their professional goals. ",
     },
     {
         title: "How can I get started with learning?",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate id magnam facilis ut eius distinctio commodi voluptas reprehenderit! Iusto aperiam quaerat quam aliquam architecto iure nam nihil dolore vero perspiciatis!",
+        desc: "Browse through our diverse range of courses to find the ones that aligns with your interests and goals to enhance your skills, select your Course, Once you've found a course that resonates with you, click on it to access detailed information, including course content, objectives, and prerequisites, then click on the 'Register' button to secure your spot in the course. You'll be guided through a simple enrollment process that includes providing your details and making the necessary payment.",
     },
     {
         title: "Will there be a certificate at the end of program?",
-        desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate id magnam facilis ut eius distinctio commodi voluptas reprehenderit! Iusto aperiam quaerat quam aliquam architecto iure nam nihil dolore vero perspiciatis!",
+        desc: "Upon successfully completing the program, you will receive a certificate of completion. This certificate serves as a recognition of your dedication and achievement throughout the program. It's a valuable credential that can be included in your professional portfolio, shared on your resume. The certificate not only showcases your commitment to continuous learning but also signifies the skills and knowledge you've acquired during the program. It's a tangible proof of your accomplishments and can make a positive impression on employers, colleagues, and potential clients.",
     },
 ]
 

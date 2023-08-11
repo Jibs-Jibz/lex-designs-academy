@@ -15,7 +15,7 @@ const Header = () => {
     AOS.refresh();
   }, []);
   return (
-    <header className=" flex flex-col  w-full gap-14 ">
+    <header className=" flex flex-col  w-full gap-32 lg:gap-24 ">
       <div className=" flex flex-col gap-14 ">
         <div className=" max-w-full w-full h-auto ">
           <Image
@@ -33,7 +33,7 @@ const Header = () => {
           <h1 className="text-lexPrimary text-6xl lg:text-[42px]  md:text-[36px] font-semibold ">
             About Us
           </h1>
-          <p className=" max-w-[1027px] w-full text-lg md:text-sm">
+          <p className="md:leading-relaxed max-w-[1027px] w-full text-lg md:text-sm">
             We are a leading online platform dedicated to empowering individuals
             with the skills and knowledge needed to succeed and are passionate
             about making a positive impact through your learnings. Through our

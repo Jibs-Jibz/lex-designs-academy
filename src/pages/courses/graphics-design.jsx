@@ -12,8 +12,16 @@ import Newsletter from "@/components/Newsletter";
 import Reviews from "@/components/Reviews";
 
 import TransitionEffect from "@/components/TransitionEffect";
+import PaymentForm from "@/components/modals/PaymentForm";
 const GraphicsDesign = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => prevIndex + 1);
+  };
+  
+  
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -38,7 +46,15 @@ const GraphicsDesign = () => {
               <Section1 openModal={openModal} element={element} index={index} />
               <Section2 openModal={openModal} element={element} index={index} />
               <Modal isOpen={isModalOpen} onClose={closeModal}>
-                <PaymentModal element={element} index={index} />
+                {currentIndex === index ? (
+                  <PaymentForm
+                    onNext={handleNext}
+                    element={element}
+                    index={index}
+                  />
+                ) : (
+                  <PaymentModal element={element} index={index} />
+                )}
               </Modal>
             </>
           ))}

@@ -29,11 +29,11 @@ export default function App({ Component, pageProps }) {
     <>
       <AnimatePresence mode='wait' >
         <div className=' bg-white dark:bg-black ' >
-          <main className={` ${poppins.variable} ${manrope.variable} ${inter.variable} font-poppins  max-w-[2550px] w-full mx-auto `} >
-            <Navbar />
+          <main className={` ${poppins.variable} ${manrope.variable} ${inter.variable}  font-poppins  max-w-[2550px] w-full mx-auto `} >
+            <Navbar  />
             <Component key={router.asPath} {...pageProps} />
-            <Footer />
           </main>
+            <Footer  />
         </div>
       </AnimatePresence>
     </>

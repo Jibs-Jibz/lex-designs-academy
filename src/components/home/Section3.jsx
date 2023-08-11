@@ -32,7 +32,7 @@ const AnimatedNumbers = ({ value }) => {
 const Section3 = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1500, // Animation duration in milliseconds
+      duration: 1000, // Animation duration in milliseconds
       delay: 200, // Delay between animations in milliseconds
       once: false, // Whether to animate elements only once
     });

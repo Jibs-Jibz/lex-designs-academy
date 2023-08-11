@@ -11,3 +11,6 @@
 p {
   font-family: var(--font-inter);
 }
+body{
+  background-color:  #671355;
+}

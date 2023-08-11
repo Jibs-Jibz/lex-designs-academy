@@ -20,20 +20,21 @@ const CourseCard = ({ element, index }) => {
           height="100"
         />
       </div>
-      <div className=" w-full !h-full flex flex-col gap-y-4 px-5 py-[30px] ">
+      <div className=" w-full !h-full flex flex-col gap-y-4 px-5 md:px-3 py-[30px] ">
         <div className=" w-full flex !h-full flex-col gap-4 ">
           <h4 className=" text-[28px] font-medium ">{element.title}</h4>
           <p className=" text-base leading-[26px] !h-full "> {element.text}</p>
         </div>
         <div className=" flex flex-wrap items-center gap-y-4 w-full justify-between ">
-          <div className=" text-sm font-medium w-fit rounded-[25px] flex items-center  px-[17px] py-[8px] dark:text-black bg-[#F0E7F1] h-fit ">
+          <div className=" text-sm font-medium w-fit rounded-[25px] flex items-center md:text-xs px-[17px] py-[8px] dark:text-black bg-[#F0E7F1] h-fit ">
             3 months <Dot /> Online
           </div>
           <Button1
+            isHyperLink={true}
             primary={true}
             cta="View more"
             href={element.path}
-            className=" !py-[12px]  px-[30px] "
+            className=" !py-[12px] md:px-[25px] md:text-sm px-[30px] "
           />
         </div>
       </div>

@@ -33,11 +33,11 @@ const Modal = ({ isOpen, onClose, children }) => {
             y: "-50%",
           }}
           animate={{ scale: 1, opacity: 1 }}
-          className="fixed  overflow-auto inset-0 h-full  w-full flex justify-center top-1/2 left-1/2   items-center bg-black bg-opacity-50"
+          className="overflow-auto inset-0 h-full z-50 w-full flex fixed top-1/2 left-1/2  md:px-4 items-start bg-black bg-opacity-50"
           ref={modalRef}
           onClick={handleOverlayClick}
         >
-          <div className=" !font-inter font-medium flex flex-col w-full  lg:py-10 md:py-6  py-20  lg:px-4 md:px-2 max-w-[800px] rounded-2xl bg-white/10 text-white   backdrop-blur-3xl shadow-md">
+          <div className=" !font-inter font-medium flex flex-col my-auto mx-auto w-full  lg:py-10 md:py-6  py-20  lg:px-4 md:px-2  max-w-[1000px] rounded-2xl bg-white/10 text-white   backdrop-blur-3xl shadow-md">
             {children}
             <div className=" flex w-full justify-center mx-auto ">
               <button

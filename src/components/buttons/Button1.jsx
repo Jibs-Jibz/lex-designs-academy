@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const Button1 = ({ href, primary, cta, className = "" }) => {
+const Button1 = ({ href, primary,onClick, cta,isHyperLink,isButton, className = "" }) => {
   const stylePrimary =
     "w-fit inline-block px-12 py-[25px] md:px-[36px] md:px-[26px] md:py-[14px] rounded-[10px] bg-lexPrimary text-white font-medium md:text-sm lg:text-base  text-[21px] border border-lexPrimary hover:bg-white hover:text-lexPrimary ";
   const styleSecondary =
@@ -9,12 +9,22 @@ const Button1 = ({ href, primary, cta, className = "" }) => {
 
   return (
     <>
-      <Link
-        href={href}
-        className={`${className} ${primary ? stylePrimary : styleSecondary} `}
-      >
-        {cta}
-      </Link>
+      {isHyperLink && (
+        <Link
+          href={href}
+          className={`${className} ${primary ? stylePrimary : styleSecondary} `}
+        >
+          {cta}
+        </Link>
+      )}
+      {isButton && (
+        <button
+        onClick={onClick}
+          className={`${className} ${primary ? stylePrimary : styleSecondary} `}
+        >
+          {cta}
+        </button>
+      )}
     </>
   );
 };

@@ -28,12 +28,12 @@ const Newsletter = () => {
         <form className="flex gap-0 xs:w-full items-center  bg-lexSecondary px-[13px] py-[10px] md:py-[7px] md:px-3 w-fit  md:flex-wrap  rounded-md justify-between ">
           <div className=" flex items-center w-fit xs:w-full gap-2 bg-transparent text-black  ">
             <Icon
-              className=" text-[30px] xl:text-[26px] md:text-lg "
+              className=" text-[30px] xl:text-[26px]  "
               icon="fluent:mail-28-regular"
             />
             <input
               placeholder="Enter email"
-              className="xs:w-full py-3 pl-2 text-xl xl:text-lg placeholder-black  bg-transparent "
+              className="xs:w-full py-3 pl-2 text-xl xl:text-lg placeholder-black focus:outline-lexPrimary bg-transparent "
               type="email"
               name=""
               id=""

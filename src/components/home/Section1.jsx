@@ -9,13 +9,13 @@ const Section1 = () => {
         {WHATWEOFFER.map((element, index) => (
           <div
             key={index}
-            className="  rounded-[15px] border border-[#BCB7B7] w-[635px] cs1:w-[48%] lg:w-full py-[45px] px-[30px] xl:px-[20px] flex flex-col gap-6 "
+            className="  rounded-[15px] border border-[#BCB7B7] w-[635px] cs1:w-[48%] md:w-full py-[45px] px-[30px] xl:px-[20px] flex flex-col gap-6 "
           >
             <div className=" flex gap-4 items-center ">
               <div className="  xl:w-[40px] w-[57px] h-[6px] bg-lexAccent  " />
-              <h3 className=" text-[32px] cs1:text-2xl md:text-[20px] font-semibold  ">{element.title}</h3>
+              <h3 className=" text-[32px] cs1:text-2xl lg:text-lg md:text-[20px] font-semibold  ">{element.title}</h3>
             </div>
-            <p className=" text-lg csl:text-base lg:text-sm leading-10 ">{element.text}</p>
+            <p className=" text-lg csl:text-base lg:text-sm leading-10 md:leading-relaxed ">{element.text}</p>
           </div>
         ))}
       </div>

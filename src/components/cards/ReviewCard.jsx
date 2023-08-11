@@ -20,7 +20,7 @@ const ReviewCard = ({ element, index }) => {
       </div>
       <div className=" flex flex-col gap-6 " >
         <h4 className=" text-[28px] font-semibold lg:text-[24px] md:text-base " >{element.name}</h4>
-        <p className=" text-lg leading-9 lg:text-sm " >{element.text}</p>
+        <p className=" text-lg leading-9 lg:text-sm md:leading-relaxed  " >{element.text}</p>
       </div>
     </div>
   );

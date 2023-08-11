@@ -6,8 +6,8 @@ import { CustomLink } from "./Navbar";
 
 const Footer = () => {
   return (
-    <div className=" bg-lexPrimary mt-40 lg:mt-20   w-full text-white dark:text-white flex flex-col justify-between ">
-      <div className=" py-[76px] xl:px-4 md:px-3 px-6 w-full flex flex-wrap gap-8  justify-between  ">
+    <div className={`max-w-full bg-lexPrimary mt-40 lg:mt-20   w-full text-white dark:text-white flex flex-col justify-between`} >
+      <div className="max-w-[2550px] items-start self-center py-[76px] xl:px-4 md:px-3 px-6 w-full flex flex-wrap gap-8  justify-between  ">
         <div className=" max-w-[411px] w-full flex flex-col  gap-10 ">
           <div className="flex flex-col gap-[22px] ">
             <div className=" max-w-[210px]  ">

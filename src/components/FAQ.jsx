@@ -35,7 +35,10 @@ const FAQ = () => {
                         }  rounded-2xl flex items-center  justify-between w-full px-4 py-6 text-left`}
                       >
                         <span className="flex-1 flex items-center md:items-start  gap-2 font-medium text-[32px] xl:text-[22px] md:text-sm ">
-                          <Icon className="text-xl xl:text-lg lg:text-base md:text-[8px]" icon="raphael:quote" />
+                          <Icon
+                            className="text-xl xl:text-lg lg:text-base md:text-[8px]"
+                            icon="raphael:quote"
+                          />
                           {data.title}
                         </span>
                         <span className="flex justify-center items-center">
@@ -52,7 +55,7 @@ const FAQ = () => {
                           )}
                         </span>
                       </Disclosure.Button>
-                      <Disclosure.Panel className="border-2 border-t-0 px-4 rounded-b-2xl flex flex-col py-8 text-lg lg:text-sm md:text-[12px] ">
+                      <Disclosure.Panel className="md:leading-relaxed border-2 border-t-0 px-4 rounded-b-2xl flex flex-col py-8 text-xl lg:text-lg md:text-sm ">
                         <p>{data.desc} </p>
                       </Disclosure.Panel>
                     </div>

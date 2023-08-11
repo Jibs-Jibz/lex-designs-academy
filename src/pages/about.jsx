@@ -19,7 +19,7 @@ const about = () => {
       </Head>
       <TransitionEffect />
       <Layout>
-        <main className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
+        <main className=" flex flex-col gap-32 xl:gap-24 lg:gap-20 ">
           <Header />
           <Section1 />
         </main>

@@ -150,14 +150,14 @@ const Navbar = () => {
           <Image
             className=" dark:hidden h-auto w-full "
             src={logo}
-            alt="Jibs"
+            alt="lex-designs"
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
           />
           <Image
             className=" hidden dark:flex h-auto w-full "
             src={logoWhite}
-            alt="Jibs"
+            alt="lex-designs"
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
           />

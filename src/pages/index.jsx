@@ -8,8 +8,19 @@ import Section2 from "@/components/home/Section2";
 import Section3 from "@/components/home/Section3";
 import Layout from "@/layouts/Layout";
 import Head from "next/head";
+import { useRef } from "react";
 
 export default function Home() {
+  const id = "my-section";
+
+  const childRef = useRef(null);
+
+  const scrollDown = () => {
+    if (childRef.current) {
+      childRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Head>
@@ -37,10 +48,10 @@ export default function Home() {
       </Head>
       <TransitionEffect />
       <Layout>
-        <main className=" flex flex-col gap-32 xl:gap-24 lg:gap-20  ">
-          <Header />
+        <main className=" flex flex-col gap-32 xl:gap-24 lg:gap-28  ">
+          <Header id={id} scrollDown={scrollDown} />
           <Section1 />
-          <Section2 />
+          <Section2 id={id} ref={childRef} />
           <Section3 />
           <FAQ />
           <Newsletter />
