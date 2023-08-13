@@ -169,6 +169,7 @@ export const UIUXDESIGNDATA = [
     },
 ]
 
+
 export const GRAPHICSDESIGNDATA = [
     {
         name: "Graphics",
@@ -194,56 +195,53 @@ export const GRAPHICSDESIGNDATA = [
         courseOverview: "Our graphics design course gives an opportunity for you to cultivate and polish your design abilities. Through the course, you will gain deep knowledge design principles and other key elements that are vital to the field of graphic design. ",
         courseContent: [
             {
-                title: "Unit 1-Fundamentals in UIUX design ",
+                title: "Unit 1- Introduction to Graphic Design ",
                 data: [
-                    " Key principles and concepts in UI/UX design ",
-                    " Importance of UI/UX in digital products ",
-                    " Explore the design thinking processes ",
-                    " Learning the industry standard tools   "
+                    " Overview of Graphic Design ",
+                    " Evolution and Importance of Graphic Design ",
+                    " Role of a graphic designer in various industries ",
+                    " Learning the industry standard tools  ",
                 ]
             }, {
-                title: " Unit 2 - User Research and Analysis",
+                title: " Unit 2 - Design building block Essentials",
                 data: [
-                    " Planning and conducting user interviews ",
-                    " Creating and distributing user surveys ",
-                    "Usability testing methods and best practices ",
-                    "  Analyzing and interpreting user research data "
+                    " Understanding design Principles and Concepts ",
+                    " Effective use of design elements ",
+                    " Typography Fundamentals ",
+                    " Layout and composition ",
                 ]
             },
             {
-                title: " Unit 3-Wireframing and Prototyping ",
+                title: "Unit 3 -   Colour / Typography",
                 data: [
-                    " Sketching and ideation techniques ",
-                    " Low-fidelity wireframing using digital tools ",
-                    " High-fidelity prototyping ",
-                    " Iterative prototyping, user feedback collection  "
+                    "Understanding colour, Types and color theory",
+                    "Colours and Emotions ",
+                    "Understanding typography, Text hierarchy ",
+                    "Leading and kerning ",
                 ]
             },
             {
-                title: " Unit 4 - Visual Design Principles",
+                title: "Unit 4 - Design in marketting ",
                 data: [
-                    " Typography principles and best practices ",
-                    " Color theory and color psychology in design ",
-                    " Grid systems and layout techniques ",
-                    " Visual hierarchy & composition in UI/UX design  "
+                    "Social media designs and publications",
+                    "Photography and Visual Identity using Adobe Photoshop, Illustrator and other design tools",
+                    " Graphics Enhancement and Systems and Photo Manipulation  ",
                 ]
             },
             {
-                title: "Unit 5 - Practice by mimicking designs ",
+                title: "Unit 5 -  Logo Design and Portfolio ",
                 data: [
-                    " How to get design inspirations ",
-                    " Replicating of several design concepts ",
-                    " How to make designs responsive ",
-                    "  Practical exercises and projects "
+                    "Understanding the research phase-Target audience profiling, Brand essence and value, e.t.c  ",
+                    " Logotype and shape design-Logo type selection, Shape and symbolism, Negative space and visual puns ",
                 ]
             },
             {
-                title: "Unit 6 - Case studies & live projects ",
+                title: "Unit 6 - Portfolio & course consolidation ",
                 data: [
-                    " Work on real life projects to improve your skills ",
-                    " How to effectively design case studies ",
-                    " Showcasing your works  ",
-                    " Networking and Professional Development  "
+                    " Crafting an impactful portfolio - personal projects ",
+                    " Client collaboration showcase ",
+                    " Professional presentation skills ",
+                    " Continued learning path ",
                 ]
             },
         ]

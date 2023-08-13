@@ -19,13 +19,13 @@ const Section2 = ({ element, index, openModal }) => {
       </h2>
       <div className=" grid grid-cols-3 2xl:grid-cols-2 justify-items-stretch   items-center md:grid-cols-1 gap-4  gap-y-10 lg:gap-y-6 w-full  ">
         {element.courseContent.map((item, index) => (
-          <div className=" px-[4%] xl:px-[3%] rounded-[20px] w-full justify-self-center border border-[#BCB7B7] max-w-[639px] md:w-full py-[55px] lg:py-[30px] flex flex-col  gap-9 lg:gap-6 ">
+          <div className="h-full px-[4%] xl:px-[3%] rounded-[20px] w-full justify-self-center border border-[#BCB7B7] max-w-[639px] md:w-full py-[55px] lg:py-[30px] flex flex-col  gap-9 lg:gap-6 ">
             <div className=" py-[22px] lg:py-[18px] xs:px-4 xs:text-center flex justify-center rounded-xl bg-lexPrimary text-white text-[24px] cs1:text-[22px] xl:text-lg lg:text-base md:text-base font-medium  ">
               {item.title}
             </div>
             {item.data.map((single, index) => (
-              <div className=" flex gap-3 lg:gap-1 items-center ">
-                <div className="  xl:w-[30px] lg:w-[20px] md:w-[10px] w-[36px] h-[3px] bg-lexPrimary  " />
+              <div className="  flex gap-3 lg:gap-1 items-center ">
+                <div className="  xl:min-w-[30px] lg:min-w-[20px] md:min-w-[10px] min-w-[36px] !h-fit !min-h-[3px] bg-lexPrimary  " />
                 <p className="   text-[18px] xl:text-base lg:text-sm flex gap-3 md:gap-2 items-center ">
                   {single}
                 </p>
