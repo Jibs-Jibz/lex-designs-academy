@@ -53,7 +53,7 @@ export const FAQDATA = [
     },
     {
         title: "How much does each course cost?",
-        desc: "Engaging and interactive modules that cover a wide range of topics, offering multimedia content, quizzes, and assessments to reinforce understanding, High-quality video lectures delivered by expert instructors, providing in-depth explanations and visual demonstrations of key concepts as well as access to various resources related to the chosen course field as well as career development resources, including resume building, interview preparation, and networking opportunities to assist students in achieving their professional goals. ",
+        desc: "At our platform, we offer courses that cater to your passions and aspirations: Our UI/UX Course costs (₦30,000) immerses you in the world of user interface and user experience design, enabling you to create captivating digital experiences. Our Graphics Design Course cost (₦20,000), where you'll learn explore the realm of graphic design with our to craft compelling visual narratives. Our Digital Art Course cost (₦20,000), where you get to unleash your creativity in the digital realm with our mastering tools",
     },
     {
         title: "How can I get started with learning?",
