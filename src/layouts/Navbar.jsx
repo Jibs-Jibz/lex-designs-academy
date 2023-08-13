@@ -120,6 +120,8 @@ const Navbar = () => {
   };
   const handleClick = () => {
     setIsOpen(!isOpen);
+    // best practice
+    // setIsOpen(prev => !prev);
   };
   // Function to close the mobile menu
   const closeMenu = () => {

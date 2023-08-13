@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import Button1 from "../buttons/Button1";
 
 const Header = ({ element, index, className = "", openModal }) => {
   return (
@@ -21,12 +22,20 @@ const Header = ({ element, index, className = "", openModal }) => {
         <Icon icon="subway:book" />
         <p className=" font-poppins ">Unit: 6 units</p>
       </div>
-      <button
+      {/* <button
         onClick={openModal}
         className="w-fit inline-block px-12 py-7 lg:py-[25px]  md:px-[26px] md:py-[14px] rounded-[10px] bg-lexPrimary text-white font-medium md:text-sm lg:text-base  text-[21px] border  hover:bg-white hover:text-lexPrimary  mt-8 md:mt-4 border-white hover:border-lexPrimary hover:border-6  "
       >
         Register now
-      </button>
+      </button> */}
+      <Button1
+        target={true}
+        isHyperLink={true}
+        cta="Register now"
+        href={element.link}
+        primary={true}
+        className=" border border-white  hover:text-white hover:border-white  "
+      />
     </div>
   );
 };

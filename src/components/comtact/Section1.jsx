@@ -154,7 +154,7 @@ const Section1 = () => {
             </div>
 
             <button
-              className={`rounded-lg w-full text-white bg-lexPrimary py-5 lg:py-3 ${
+              className={`rounded-lg w-full text-white bg-lexPrimary py-5 lg:py-3 hover:bg-transparent border hover:text-lexPrimary hover:border-lexPrimary dark:hover:text-white ${
                 isSubmitting ? "cursor-not-allowed" : ""
               }`}
               type="submit"

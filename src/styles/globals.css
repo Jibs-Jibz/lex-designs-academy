@@ -11,6 +11,27 @@
 p {
   font-family: var(--font-inter);
 }
-body{
-  background-color:  #671355;
+body {
+  background-color: #671355;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translateY(-50%);
+  width: 90%;
+  height: 2px;
+  background-color: #fff;
 }

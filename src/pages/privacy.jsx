@@ -120,6 +120,7 @@ const privacy = () => {
           </div>
         </div>
       </div>
+      <div className="button">button</div>
     </>
   );
 };

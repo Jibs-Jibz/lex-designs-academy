@@ -21,7 +21,7 @@ const DigitalArt = () => {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => prevIndex + 1);
   };
-  
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -30,21 +30,18 @@ const DigitalArt = () => {
     setIsModalOpen(false);
   };
 
-
   return (
     <>
       <TransitionEffect />
       <Layout>
         <div className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
           {DIGITALARTSDATA.map((element, index) => (
-            <div key={index}>
-              {" "}
-              {/* Wrap each group of components in a container */}
+            <>
               <Header
-                className="!bg-courseBgDigital"
+                className="!bg-courseBgGraphics"
+                openModal={openModal}
                 element={element}
                 index={index}
-                openModal={openModal}
               />
               <Section1 openModal={openModal} element={element} index={index} />
               <Section2 openModal={openModal} element={element} index={index} />
@@ -59,7 +56,7 @@ const DigitalArt = () => {
                   <PaymentModal element={element} index={index} />
                 )}
               </Modal>
-            </div>
+            </>
           ))}
           <Section3 />
           <FAQ />

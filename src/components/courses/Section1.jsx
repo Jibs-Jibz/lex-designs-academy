@@ -61,8 +61,8 @@ const Section1 = ({ element, index, openModal }) => {
               ))}
             </div>
             <button
-              onClick={openModal}
-              className="  text-[36px] xl:text-2xl lg:text-lg md:text-base md:w-full md:self-center md:max-w-[319px] flex w-full justify-center  items-center py-[15px] text-white bg-lexPrimary rounded-[6px]  border hover:bg-transparent hover:text-lexPrimary hover:border-lexPrimary "
+              // onClick={openModal}
+              className=" cursor-default text-[36px] xl:text-2xl lg:text-lg md:text-base md:w-full md:self-center md:max-w-[319px] flex w-full justify-center  items-center py-[15px] text-white bg-lexPrimary rounded-[6px]  border  "
             >
               &#8358;{element.coursePrice}.00
             </button>

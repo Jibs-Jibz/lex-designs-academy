@@ -95,6 +95,7 @@ export const UIUXDESIGNDATA = [
         text: "Learn from Beginner to Intermediate level",
         duration: "3 months",
         unit: "6 units",
+        link: "https://paystack.com/buy/uiux-design-nsvybx",
         whyCourse: [
             "High demand skill across various industries",
             "Enhanced User eccentric mindset",
@@ -175,6 +176,7 @@ export const GRAPHICSDESIGNDATA = [
         text: "Learn from Beginner to Intermediate level",
         duration: "3 months",
         unit: "6 units",
+        link: "https://paystack.com/buy/graphic-design-crse",
         whyCourse: [
             "Develop and enhance your creative skills",
             "Personal projects and freelancing",
@@ -256,6 +258,7 @@ export const DIGITALARTSDATA = [
         text: "Learn from Beginner to Intermediate level",
         duration: "3 months",
         unit: "6 units",
+        link: "https://paystack.com/buy/digital-art",
         whyCourse: [
             "Relevance in the digital space for artists",
             "Professional Software and tools and techniques ",

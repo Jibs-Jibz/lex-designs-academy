@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button1 from "../buttons/Button1";
 
 const Section2 = ({ element, index, openModal }) => {
   useEffect(() => {
@@ -33,13 +34,15 @@ const Section2 = ({ element, index, openModal }) => {
           </div>
         ))}
       </div>
-      <button
+      <Button1
+        cta="Register now"
+        href={element.link}
+        primary={true}
+        isHyperLink={true}
+        target={true}
         data-aos="fade-up"
-        onClick={openModal}
-        className=" bg-lexPrimary max-w-[628px] xl:max-w-[500px] md:max-w-[65%] w-full py-7 xl:py-6 lg:py-4 rounded-xl flex justify-center self-center text-[32px] font-semibold text-white xl:text-[24px] lg:text-2xl md:text-lg border hover:bg-transparent hover:text-lexPrimary hover:border-lexPrimary "
-      >
-        Register now
-      </button>
+        className=" bg-lexPrimary max-w-[628px] xl:max-w-[500px] md:max-w-[65%] w-full py-7 xl:py-6 lg:py-4 rounded-xl flex justify-center self-center text-[32px] font-semibold text-white xl:text-[24px] lg:text-2xl md:text-lg border cursor-default   "
+      />
     </div>
   );
 };
