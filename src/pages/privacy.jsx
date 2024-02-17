@@ -9,7 +9,7 @@ const privacy = () => {
           className="text-[30px] text-lexPrimary uppercase font-bold text-center"
           data-aos="zoom-out"
         >
-          LEX DESIGN ACADEMY <br /> Privacy Policy{" "}
+          MERP DESIGN ACADEMY <br /> Privacy Policy{" "}
         </h1>
         <div className="flex gap-16 leading-[40px] justify-center  opacity-90 relative">
           <div className="flex flex-col opacity-90 max-w-[800px]">
@@ -24,19 +24,19 @@ const privacy = () => {
                 className="opacity-80 text-[18px] md:text-sm md:text-left text-justify lg:tracking-[0.3px]"
                 data-aos="fade-up"
               >
-                Lex Design Academy conducts business responsibly and
+                MERP Design Academy conducts business responsibly and
                 sustainably, ensuring that Students information is securely
                 collected, processed, and stored in accordance with business
-                requirements. Lex Design Academy has provided appropriate
+                requirements. MERP Design Academy has provided appropriate
                 documentation, including a privacy policy, to support this and
-                ensure compliance with industry regulations. Lex Design Academy,
-                as a result, provides notice of this policy and any applicable
-                procedures. It specifies why personal information is collected,
-                used, processed, disclosed, retained, and disposed of. We use
-                the term "personal information or data" to describe information
-                that can be associated with a specific person and used to
-                identify that person throughout this Privacy Policy. We do not
-                consider anonymous information to be personal information
+                ensure compliance with industry regulations. MERP Design
+                Academy, as a result, provides notice of this policy and any
+                applicable procedures. It specifies why personal information is
+                collected, used, processed, disclosed, retained, and disposed
+                of. We use the term "personal information or data" to describe
+                information that can be associated with a specific person and
+                used to identify that person throughout this Privacy Policy. We
+                do not consider anonymous information to be personal information
                 because it does not identify a specific user.
               </p>
             </div>
@@ -120,7 +120,6 @@ const privacy = () => {
           </div>
         </div>
       </div>
-      <div className="button">button</div>
     </>
   );
 };

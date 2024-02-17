@@ -20,7 +20,7 @@ const Header = () => {
         <div className=" max-w-full w-full h-auto ">
           <Image
             src={img}
-            alt="about-img-Lex-Designs"
+            alt="about-img-MERP-Designs"
             className=" w-full h-auto  "
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
@@ -48,7 +48,7 @@ const Header = () => {
         <div className=" w-full h-auto ">
           <Image
             src={bgDesign}
-            alt="about-img-Lex-Designs"
+            alt="about-img-MERP-Designs"
             className=" w-full h-auto  "
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"

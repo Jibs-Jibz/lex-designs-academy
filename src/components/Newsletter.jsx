@@ -9,7 +9,7 @@ const Newsletter = () => {
       <div className=" w-1/2 lg:rounded-[15px] md:w-full ">
         <Image
           src={img}
-          alt="lex-designs"
+          alt="MERP-designs"
           className=" w-full object-cover h-auto lg:rounded-[15px] md:w-full "
           priority
           sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"

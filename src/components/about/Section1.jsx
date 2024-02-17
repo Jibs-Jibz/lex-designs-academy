@@ -21,14 +21,14 @@ const Section1 = () => {
           <div className=" flex flex-col gap-6 md:gap-3 ">
             {" "}
             <h2 className="text-lexPrimary text-[45px] lg:text-[32px] md:text-[24px] font-semibold ">
-              Who We Are For? Choose Lex Design Academy
+              Who We Are For? Choose MERP Design Academy
             </h2>
             <p className="md:leading-relaxed text-lg lg:text-sm font-inter font-normal ">
-              Lex Design Academy is tailored for individuals with a drive for
+              MERP Design Academy is tailored for individuals with a drive for
               excellence and an unwavering commitment to success. Whether you
               are an aspiring designer seeking to refine your craft or a career
               transitioner aiming to immerse yourself in the realm of design,
-              Lex Design Academy stands as your dedicated ally on this journey.
+              MERP Design Academy stands as your dedicated ally on this journey.
             </p>
           </div>
           <div className=" flex flex-col gap-6 md:gap-3 ">
@@ -47,7 +47,7 @@ const Section1 = () => {
         <div className="w-1/2 max-w-[589px] lg:w-full ">
           <Image
             src={img}
-            alt="Lex-Designs"
+            alt="MERP-Designs"
             className=" w-full h-auto  md:w-full "
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
@@ -61,7 +61,12 @@ const Section1 = () => {
         <h2 className="text-lexPrimary text-[45px] lg:text-[32px] md:text-[24px] text-center font-bold ">
           Are you Ready To Take that First Step?{" "}
         </h2>
-        <Button1 isHyperLink={true} cta="Start learning now" href={`/#reff`} primary={true} />
+        <Button1
+          isHyperLink={true}
+          cta="Start learning now"
+          href={`/#reff`}
+          primary={true}
+        />
       </div>
     </div>
   );

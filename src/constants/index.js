@@ -40,8 +40,8 @@ export const COURSES = [
 
 export const FAQDATA = [
     {
-        title: "What makes Lex academy unique from others",
-        desc: " At Lex Academy, our distinct approach to education sets us apart from the rest. With a commitment to excellence and innovation, we have crafted a learning environment as we believe in nurturing not only academic prowess but also personal growth. Our curriculum is designed to foster critical thinking, creativity, emotional intelligence, and practical skills, ensuring that our students are well-rounded individuals prepared for the complexities in the modern world. ",
+        title: "What makes MERP academy unique from others",
+        desc: " At MERP Academy, our distinct approach to education sets us apart from the rest. With a commitment to excellence and innovation, we have crafted a learning environment as we believe in nurturing not only academic prowess but also personal growth. Our curriculum is designed to foster critical thinking, creativity, emotional intelligence, and practical skills, ensuring that our students are well-rounded individuals prepared for the complexities in the modern world. ",
     },
     {
         title: "What program and courses do you offer",

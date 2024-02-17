@@ -35,7 +35,7 @@ const Header = () => {
             </div>
             <div className=" flex flex-col items-end 3xs:items-center 3xs:w-full gap-5 sm:gap-3  ">
               <h3 className="flex gap-1 text-[28px] lg:text-[20px] md:text-base xs:text-sm font-medium ">
-                <div className="md:flex hidden md:text-2xl xs:text-xl items-center" >
+                <div className="md:flex hidden md:text-2xl xs:text-xl items-center">
                   <Icon icon="mdi:call" />
                 </div>
                 Phone Number
@@ -55,16 +55,16 @@ const Header = () => {
             </div>
             <div className=" flex flex-col items-end 3xs:items-center 3xs:w-full gap-5 sm:gap-3  ">
               <h3 className="flex gap-1 text-[28px] lg:text-[20px] md:text-base xs:text-sm font-medium ">
-              <div className="md:flex hidden md:text-2xl xs:text-xl items-center" >
+                <div className="md:flex hidden md:text-2xl xs:text-xl items-center">
                   <Icon icon="mdi:email" />
                 </div>
                 Email Address
               </h3>
               <a
                 className=" text-[26px] lg:text-[18px] md:text-sm xs:text-xs "
-                href="mailto:Lexdesignacademy@gmail.com"
+                href="mailto:Merpdesignacademy@gmail.com"
               >
-                Lexdesignacademy@gmail.com
+                Merpdesignacademy@gmail.com
               </a>
             </div>
           </div>

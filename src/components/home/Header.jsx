@@ -51,7 +51,7 @@ const Header = ({ id }) => {
             Elevate your learning with our Tech courses
           </h1>
           <p className=" text-lg md:text-sm md:leading-relaxed font-inter leading-7 font-normal ">
-            Joining LEX Design academy is the perfect way to learn any skill.
+            Joining MERP Design academy is the perfect way to learn any skill.
             With our state-of-the-art learning tools and resources, you can
             master any skill at your own pace.
           </p>
@@ -69,7 +69,7 @@ const Header = ({ id }) => {
           <Image
             data-aos="fade-down"
             src={homeHeader}
-            alt="Lex-Designs"
+            alt="MERP-Designs"
             className=" w-full h-auto  md:w-full "
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
@@ -82,7 +82,7 @@ const Header = ({ id }) => {
           <Image
             data-aos="fade-down"
             src={homeHeader2}
-            alt="Lex-Designs"
+            alt="MERP-Designs"
             className="rounded-2xl w-full h-auto  md:w-full "
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"

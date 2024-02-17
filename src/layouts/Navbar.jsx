@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import logo from "../../public/images/logo.png";
-import logoWhite from "../../public/images/logo-white.png";
+import logoMerp from "../../public/images/logo-merp.png";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { HamburgerClose, HamburgerOpen } from "@/components/Icons";
@@ -20,10 +19,10 @@ export const CustomLink = ({ href, title, className = "", asPathStyle }) => {
     >
       <Link
         href={href}
-        className={` ${className} dark:text-white ${
+        className={` ${className}  ${
           router.asPath === href
-            ? `text-lexPrimary dark:text-lexAccent hover:text-lexPrimary font-bold ${asPathStyle} `
-            : "font-medium"
+            ? `text-lexPrimary dark:!text-lexPrimary  hover:text-lexPrimary font-bold ${asPathStyle} `
+            : "font-medium dark:text-white "
         }   group`}
       >
         {title}
@@ -146,19 +145,21 @@ const Navbar = () => {
   };
 
   return (
-    <header className="  shadow-[0px_6px_15px_0px_rgba(0,0,0,0.15)] relative ">
-      <nav className="w-full flex flex-row items-center  justify-between xl:px-4 md:px-3 px-6 pt-7">
-        <div className=" max-w-[210px] md:max-w-[117px]  ">
+    <header className=" dark:shadow-sm dark:shadow-white/50 shadow-[0px_6px_15px_0px_rgba(0,0,0,0.15)] relative ">
+      <nav className="w-full flex flex-row items-center  justify-between xl:px-4 md:px-3 px-6 pb-4 pt-7">
+        <div className=" max-w-[110px] md:max-w-[117px]  ">
           <Image
             className=" dark:hidden h-auto w-full "
-            src={logo}
+            src={logoMerp}
+            // src={`/images/logo-merp.png`}
             alt="lex-designs"
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
           />
           <Image
             className=" hidden dark:flex h-auto w-full "
-            src={logoWhite}
+            src={logoMerp}
+            // src={`/images/logo-merp.png`}
             alt="lex-designs"
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
@@ -225,14 +226,14 @@ const Navbar = () => {
           >
             {mode === "dark" ? (
               <Icon
-                width="40"
-                className="w-[40px] h-[40px] fill-black"
+                width="25"
+                className="w-[25px] h-[25px] fill-black"
                 icon="line-md:moon-filled-alt-loop"
               />
             ) : (
               <Icon
-                width="40"
-                className="w-[40px] h-[40px] fill-black"
+                width="25"
+                className="w-[25px] h-[25px] fill-black"
                 icon="line-md:sun-rising-loop"
               />
             )}

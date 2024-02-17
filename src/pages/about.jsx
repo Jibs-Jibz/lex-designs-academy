@@ -9,10 +9,10 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>About || Lex Design Academy</title>
+        <title>About || MERP Design Academy</title>
         <meta
           name="description"
-          content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings || Lex Design Academy"
+          content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings || MERP Design Academy"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

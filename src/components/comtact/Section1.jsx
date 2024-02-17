@@ -167,7 +167,7 @@ const Section1 = () => {
         <div className="w-1/2 md:hidden max-w-[589px] flex self-center  md:w-full ">
           <Image
             src={img}
-            alt="Lex-Designs"
+            alt="MERP-Designs"
             className=" w-full rounded-md h-auto  md:w-full "
             priority
             sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"

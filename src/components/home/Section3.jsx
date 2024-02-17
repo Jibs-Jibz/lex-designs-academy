@@ -48,14 +48,15 @@ const Section3 = () => {
           </h2>
           <p className=" max-w-[601px] lg:max-w-full xl:max-w-[480px]  text-lg xl:text-base  pb-[40px] leading-[42px] ">
             We pride ourselves on having the best and most experienced mentors
-            in the industry. Each mentor at Lex academy is carefully selected
+            in the industry. Each mentor at MERP academy is carefully selected
             based on their extensive industry experience and their dedication to
             guiding and inspiring students making their learning journey truly
             exceptional
           </p>
           <div
-              data-aos="fade-up"
-           className=" dark:text-black shadow-xl flex flex-wrap gap-y-[32px]  gap-x-[70px] xl:gap-x-[50px] lg:gap-x-[43px] md:gap-x-[32px] justify-between  px-[50px] xl:px-[34px] py-[30px] xl:py-[23px] : w-fit bg-lexAccent rounded-[10px] shadow-lex-num-count ">
+            data-aos="fade-up"
+            className=" dark:text-black shadow-xl flex flex-wrap gap-y-[32px]  gap-x-[70px] xl:gap-x-[50px] lg:gap-x-[43px] md:gap-x-[32px] justify-between  px-[50px] xl:px-[34px] py-[30px] xl:py-[23px] : w-fit bg-lexAccent rounded-[10px] shadow-lex-num-count "
+          >
             <div className=" flex flex-col w-fit xs:mx-auto ">
               <span className=" text-[45px] xl:text-[32px] md:text-[21px] font-semibold  ">
                 <AnimatedNumbers value={50} />+{" "}

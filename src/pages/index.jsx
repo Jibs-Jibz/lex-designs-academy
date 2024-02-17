@@ -24,26 +24,23 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Lex Design Academy</title>
+        <title>MERP Design Academy</title>
         <meta
           name="description"
-          content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings. || Lex Design Academy"
+          content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings. || MERP Design Academy"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <meta
           property="og:image"
-          content="https://lex-designs-academy.vercel.app//logo.png"
+          content="https://www.merpdesignacademy.com/logo.png"
         />
-        <meta property="og:title" content="Lex Design Academy" />
+        <meta property="og:title" content="MERP Design Academy" />
         <meta
           property="og:description"
-          content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings. || Lex Design Academy"
+          content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings. || MERP Design Academy"
         />
-        <meta
-          property="og:url"
-          content="https://lex-designs-academy.vercel.app"
-        />
+        <meta property="og:url" content="https://www.merpdesignacademy.com/" />
         <meta property="og:type" content="website" />
       </Head>
       <TransitionEffect />
