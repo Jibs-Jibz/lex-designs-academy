@@ -1,17 +1,27 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { useEffect, useRef, useState } from "react"
-import logoMerp from "../../public/icons/lex-design-academy-icon.svg"
-import { useRouter } from "next/router"
-import Link from "next/link"
-import { HamburgerClose, HamburgerOpen } from "@/components/Icons"
-import useThemeSwitcher from "@/hooks/useThemeSwitcher"
-import { Icon } from "@iconify/react"
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import logoMerp from "../../public/icons/lex-design-academy-icon.svg";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { HamburgerClose, HamburgerOpen } from "@/components/Icons";
+import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+
 // Nav Link Component for desktop
 export const CustomLink = ({ href, title, className = "", asPathStyle }) => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <motion.div
       whileHover={{
@@ -29,50 +39,36 @@ export const CustomLink = ({ href, title, className = "", asPathStyle }) => {
         {title}
       </Link>
     </motion.div>
-  )
-}
+  );
+};
 
 // Navs Link Component for Mobile
 const CustomMobileLink = ({ href, title, toggle, className = "" }) => {
-  const router = useRouter()
+  const router = useRouter();
   const handleClick = () => {
-    router.push(href)
-    toggle()
-  }
+    router.push(href);
+    toggle();
+  };
 
   return (
     <button
       href={href}
       onClick={handleClick}
       className={` ${className}  ${
-        router.asPath === href ? " text-lexAccent dark:text-lexPrimary font-bold" : "dark:text-black text-white/75"
+        router.asPath === href
+          ? " text-lexAccent dark:text-lexPrimary font-bold"
+          : "dark:text-black text-white/75"
       } hover:text-lexPrimary dark:hover:text-lexAccent  font-medium group`}
     >
       {title}
     </button>
-  )
-}
-
-const CourseLink = ({ href, text, onClick, className = "" }) => {
-  return (
-    <Link href={href}>
-      <motion.li
-        onClick={onClick}
-        whileHover={{
-          x: 2,
-        }}
-        className={`cursor-pointer font-medium hover:dark:text-lexAccent text-black dark:text-white hover:text-lexPrimary p-1 ${className} `}
-      >
-        {text}
-      </motion.li>
-    </Link>
-  )
-}
+  );
+};
 
 const CourseMobileLink = ({ href, text, onClick, className = "" }) => {
   const handleClick = () => {
-    onClick()
-  }
+    onClick();
+  };
 
   return (
     <Link href={href}>
@@ -86,18 +82,45 @@ const CourseMobileLink = ({ href, text, onClick, className = "" }) => {
         {text}
       </motion.li>
     </Link>
-  )
-}
+  );
+};
+
+// Courses array - 9 courses for 3x3 grid
+const courses = [
+  { title: "UI/UX Design", href: "/courses/ui-ux-design" },
+  { title: "Graphics Design", href: "/courses/graphics-design" },
+  { title: "Video Editing", href: "/courses/video-editing" },
+  { title: "Social Media Management", href: "/courses/social-media-management" },
+  { title: "Content Writing", href: "/courses/content-writing" },
+  { title: "Digital Marketing", href: "/courses/digital-marketing" },
+  { title: "Virtual Assistant", href: "/courses/virtual-assistant" },
+  { title: "Web Design (WordPress)", href: "/courses/web-design" },
+  { title: "Frontend Web Development", href: "/courses/frontend-web-development" },
+  { title: "Backend Web Development", href: "/courses/backend-web-development" },
+  { title: "Mobile App Development", href: "/courses/mobile-app-development" },
+];
+
+const CourseItem = ({ title, href, className }) => {
+  return (
+    <NavigationMenuLink asChild>
+      <Link
+        href={href}
+        className={cn(
+          " select-none rounded-md p-4 leading-none no-underline outline-none transition-colors hover:bg-lexPrimary/10 dark:hover:bg-lexAccent/10 hover:text-lexPrimary dark:hover:text-lexAccent  min-h-[60px] flex items-center justify-start",
+          className
+        )}
+      >
+        <div className="text-base text-left font-medium leading-none">{title}</div>
+      </Link>
+    </NavigationMenuLink>
+  );
+};
 
 const Navbar = () => {
-  const [mode, setMode] = useThemeSwitcher()
-  const [isOpen, setIsOpen] = useState(false)
-  const menuRef = useRef(null)
-  const [shown, setShown] = useState(false)
-
-  const toggleDropdown = () => {
-    setShown(!shown)
-  }
+  const [mode, setMode] = useThemeSwitcher();
+  const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+  const [shown, setShown] = useState(false);
 
   const showMenu = {
     enter: {
@@ -115,28 +138,28 @@ const Navbar = () => {
         display: "none",
       },
     },
-  }
+  };
 
   const handleClick = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
   const closeMenu = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick)
+    document.addEventListener("mousedown", handleOutsideClick);
     return () => {
-      document.removeEventListener("mousedown", handleOutsideClick)
-    }
-  }, [])
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   const handleOutsideClick = (event) => {
     if (menuRef.current && !menuRef.current.contains(event.target)) {
-      closeMenu()
+      closeMenu();
     }
-  }
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white px-12 dark:bg-black dark:shadow-sm dark:shadow-white/50 shadow-[0px_6px_15px_0px_rgba(0,0,0,0.15)] backdrop-blur-md">
@@ -158,7 +181,7 @@ const Navbar = () => {
           />
         </div>
 
-        <div className=" lg:hidden flex gap-20  ">
+        <div className=" lg:hidden flex gap-20 items-center ">
           <CustomLink
             className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
             href="/"
@@ -169,23 +192,29 @@ const Navbar = () => {
             href="/about"
             title=" About "
           />
-          <motion.div
-            className="hover:text-lexPrimary  hover:font-bold dark:hover:text-lexAccent font-medium group"
-            onHoverStart={() => setShown(true)}
-            onHoverEnd={() => setShown(false)}
-          >
-            <span className=" hover:font-bold dark:text-white dark:hover:text-lexAccent  cursor-pointer">Courses</span>
-            <motion.ul
-              variants={showMenu}
-              initial="exit"
-              animate={shown ? "enter" : "exit"}
-              className="absolute bg-white border  dark:bg-black dark:hover:text-lexAccent dark:border-lexAccent border-lexPrimary border-opacity-50 rounded-lg p-2"
-            >
-              <CourseLink href="/courses/ui-ux-design" text="UIUX design" onClick={toggleDropdown} />
-              <CourseLink href="/courses/graphics-design" text="Graphics design" onClick={toggleDropdown} />
-              <CourseLink href="/courses/digital-art" text="Digital art" onClick={toggleDropdown} />
-            </motion.ul>
-          </motion.div>
+
+          {/* Shadcn Navigation Menu for Courses - 3x3 Grid */}
+          <NavigationMenu className="[&>div]:left-1/2 [&>div]:-translate-x-1/2">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold font-medium dark:text-white bg-transparent">
+                  Courses
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid grid-cols-3 text-right gap-4 p-6 w-[1000px] min-h-[300px] ">
+                    {courses.map((course) => (
+                      <CourseItem
+                        key={course.title}
+                        title={course.title}
+                        href={course.href}
+                      />
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
           <CustomLink
             className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
             href="/contact"
@@ -205,9 +234,17 @@ const Navbar = () => {
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
           >
             {mode === "dark" ? (
-              <Icon width="25" className="w-[25px] h-[25px] fill-black" icon="line-md:moon-filled-alt-loop" />
+              <Icon
+                width="25"
+                className="w-[25px] h-[25px] fill-black"
+                icon="line-md:moon-filled-alt-loop"
+              />
             ) : (
-              <Icon width="25" className="w-[25px] h-[25px] fill-black" icon="line-md:sun-rising-loop" />
+              <Icon
+                width="25"
+                className="w-[25px] h-[25px] fill-black"
+                icon="line-md:sun-rising-loop"
+              />
             )}
           </button>
         </motion.div>
@@ -231,11 +268,17 @@ const Navbar = () => {
         >
           <nav className="flex flex-col items-center text-center justify-center gap-10 ">
             <CustomMobileLink toggle={handleClick} href="/" title=" Home " />
-            <CustomMobileLink toggle={handleClick} href="/about" title=" About " />
+            <CustomMobileLink
+              toggle={handleClick}
+              href="/about"
+              title=" About "
+            />
+
+            {/* Mobile Courses Menu */}
             <motion.div
               className="hover:text-lexPrimary font-medium group cursor-pointer"
               onClick={() => {
-                setShown(!shown)
+                setShown(!shown);
               }}
             >
               <span className="flex gap-1 items-center  dark:text-black text-white/75">
@@ -247,12 +290,22 @@ const Navbar = () => {
                 animate={shown ? "enter" : "exit"}
                 className="absolute flex justify-center items-center flex-col dark:bg-black border bg-white  dark:hover:text-lexAccent dark:border-lexPrimary border-lexAccent border-opacity-50 rounded-lg p-2"
               >
-                <CourseMobileLink href="/courses/ui-ux-design" text="UIUX design" onClick={handleClick} />
-                <CourseMobileLink href="/courses/graphics-design" text="Graphics design" onClick={handleClick} />
-                <CourseMobileLink href="/courses/digital-art" text="Digital art" onClick={handleClick} />
+                {courses.map((course) => (
+                  <CourseMobileLink
+                    key={course.title}
+                    href={course.href}
+                    text={course.title}
+                    onClick={handleClick}
+                  />
+                ))}
               </motion.ul>
             </motion.div>
-            <CustomMobileLink toggle={handleClick} href="/contact" title=" Contact Us" />
+
+            <CustomMobileLink
+              toggle={handleClick}
+              href="/contact"
+              title=" Contact Us"
+            />
           </nav>
 
           <motion.div
@@ -262,21 +315,31 @@ const Navbar = () => {
           >
             <button
               className={`  flex items-center justify-center rounded-full p-1 ${
-                mode === "light" ? "bg-black text-white" : " bg-white text-black"
+                mode === "light"
+                  ? "bg-black text-white"
+                  : " bg-white text-black"
               }            `}
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
             >
               {mode === "dark" ? (
-                <Icon width="30" className="w-[30px] h-[30px] fill-black" icon="line-md:moon-filled-alt-loop" />
+                <Icon
+                  width="30"
+                  className="w-[30px] h-[30px] fill-black"
+                  icon="line-md:moon-filled-alt-loop"
+                />
               ) : (
-                <Icon width="30" className="w-[30px] h-[30px] fill-black" icon="line-md:sun-rising-loop" />
+                <Icon
+                  width="30"
+                  className="w-[30px] h-[30px] fill-black"
+                  icon="line-md:sun-rising-loop"
+                />
               )}
             </button>
           </motion.div>
         </motion.div>
       ) : null}
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
