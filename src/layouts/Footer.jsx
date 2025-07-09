@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 // import logo from "../../public/images/logo-white.png";
-import logoMerp from "../../public/images/logo-white.png";
+import logoMerp from "../../public/icons/lex-design-academy-footer-icon.svg";
 
 import { Icon } from "@iconify/react";
 import { CustomLink } from "./Navbar";
@@ -11,7 +11,7 @@ const Footer = () => {
     <div
       className={`max-w-full bg-lexPrimary mt-40 lg:mt-20   w-full text-white dark:text-white flex flex-col justify-between`}
     >
-      <div className="max-w-[2550px] items-start self-center py-[76px] xl:px-4 md:px-3 px-6 w-full flex flex-wrap gap-8  justify-between  ">
+      <div className="max-w-[2550px] items-start self-center py-[76px] xl:px-4 md:px-3 px-20 w-full flex flex-wrap gap-8  justify-between  ">
         <div className=" max-w-[411px] w-full flex flex-col  gap-10 ">
           <div className="flex flex-col gap-[22px] ">
             <div className=" max-w-[210px]  ">
@@ -24,7 +24,7 @@ const Footer = () => {
               />
             </div>
             <p className=" text-lg lg:text-base md:text-sm font-medium leading-8 ">
-              Joining MERP Design academy is the perfect way to learn any skill,
+              Joining LEX Design academy is the perfect way to learn any skill,
               anywhere. With our state-of-the-art learning tools and resources,
               you can master any skill at your own pace.
             </p>
@@ -119,7 +119,7 @@ const Footer = () => {
       <div className="  xl:min-h-full w-full py-[47px] flex items-start justify-center border-t border-t-[#B9B9B9] ">
         {/* min-h-[95vh] */}
         <span className="text-white hover:text-white w-fit text-xl xl:text-lg md:text-sm sm:text-[12px] ">
-          @MERP design academy,2023. All Rights Reserved.
+          @LEX design academy,2025. All Rights Reserved.
         </span>
       </div>
     </div>

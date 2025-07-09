@@ -47,8 +47,8 @@ const Header = ({ id }) => {
           data-aos="fade-up"
           className="w-1/2  flex flex-col justify-around  gap-11 md:gap-6 lg:w-full"
         >
-          <h1 className=" text-6xl lg:text-[42px] md:leading-tight md:text-[36px] font-semibold ">
-            Elevate your learning with our Tech courses
+          <h1 className=" text-6xl lg:text-[42px] md:leading-10 md:text-[36px] font-semibold ">
+            Elevate your <span className=" py-20"> learning with our </span>  Tech courses
           </h1>
           <p className=" text-lg md:text-sm md:leading-relaxed font-inter leading-7 font-normal ">
             Joining MERP Design academy is the perfect way to learn any skill.

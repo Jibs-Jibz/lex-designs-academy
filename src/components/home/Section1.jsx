@@ -3,8 +3,8 @@ import React from "react";
 
 const Section1 = () => {
   return (
-    <div className=" flex flex-col gap-9 w-full ">
-      <h2 className=" text-[45px] lg:text-[32px] md:text-[24px] font-semibold ">What we offer</h2>
+    <div className=" flex flex-col gap-10 w-full ">
+      <h2 className=" text-[45px] lg:text-[32px] md:text-[24px] sm:px-24 font-semibold ">What we offer</h2>
       <div className=" max-w-[1311px] w-full flex flex-wrap justify-between self-center items-center gap-y-10 gap-x-[32px] cs1:gap-x-0 lg:gap-x-0 ">
         {WHATWEOFFER.map((element, index) => (
           <div
