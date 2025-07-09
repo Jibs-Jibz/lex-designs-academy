@@ -708,12 +708,12 @@ export const VIRTUALASSISTANCEDATA = [
     unit: "6 units",
     link: "https://paystack.com/buy/virtual-assistance-ttxlyx",
     whyCourse: [
-      "Learn SEO, paid ads, email, content, and social media",
-      "Stay ahead with up-to-date tools and strategies",
-      "Gain practical skills via campaign simulations",
-      "Understand analytics and data-driven marketing",
+      "Learn real-world VA skills for remote work",
+      "Master admin tools like Google Workspace and Trello",
+      "Build service packages and attract global clients",
+      "Start freelancing with confidence",
     ],
-    benefitsImg: "/images/course-section1-creation.jpeg",
+    benefitsImg: "/images/course-section-virtual.jpeg",
     benefits: [
       "Hands on learning",
       "Comprehensive curriculum",
@@ -722,14 +722,88 @@ export const VIRTUALASSISTANCEDATA = [
     ],
     coursePrice: "100,000",
     courseOverview:
-      "This course prepares you for careers in advertising, marketing, and e-commerce by teaching you how to build and run full-funnel digital campaigns across multiple platforms.",
+      "This course equips you with virtual assistant skills for administrative, content, customer support, and scheduling tasks, along with client onboarding and remote communication",
     courseContent: [
       {
-        title: "Unit 1 - Digital Marketing Landscape",
+        title: "Unit 1 - VA Essentials",
         data: [
-          "Understand PESO model (Paid, Earned…)Map customer journey online",
-          "Identify key channels & tactics",
-          "Set campaign objectives & KPIs",
+          "Define VA scope & service niches",
+          "Set up home office tools efficiently",
+          "Master time‑tracking & invoicing",
+          "Establish clear client communication",
+        ],
+      },
+      {
+        title: "Unit 2 - Administrative Support",
+        data: [
+          "Manage calendars & inboxes",
+          "Coordinate travel & meetings",
+          "Create professional documents & slides",
+          "Maintain digital filing systems",
+        ],
+      },
+      {
+        title: "Unit 3 - Social & Content Tasks",
+        data: [
+          "Schedule posts with Hootsuite/Buffer",
+          "Draft basic blog posts & emails",
+          "Design quick graphics in Canva",
+          "Monitor comments & respond",
+        ],
+      },
+      {
+        title: " Unit 4 - Customer & Sales Support",
+        data: [
+          "Use CRM tools (HubSpot, Pipedrive)",
+          "Process orders & refunds",
+          "UHandle live chat & ticket systems",
+          "Upsell & cross‑sell politely",
+        ],
+      },
+      {
+        title: "Unit 5 - Business Growth & Ethics",
+        data: [
+          "Price services & negotiate retainers",
+          "Draft contracts & NDAs",
+          "Uphold data privacy & security",
+          "Build testimonials & referrals pipeline",
+        ],
+      },
+    ],
+  },
+];
+export const WEBDESIGNDATA = [
+  {
+  name: "Web Design (WordPress)",
+    title: "Web Design (WordPress)",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/digital-marketing-mirwzr",
+    whyCourse: [
+      "Build real websites using WordPress and Elementor",
+      "Learn design fundamentals and user flow",
+      "Gain experience with client-ready projects",
+      "Monetize your skills with freelance or agency work",
+    ],
+    benefitsImg: "/images/course-section1-digital.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "150,000",
+    courseOverview:
+      "This course introduces you to WordPress website design from setup to launch. You’ll learn how to create pages, customize themes, add plugins, and design for user experience",
+    courseContent: [
+      {
+        title: "Unit 1 - WordPress Basics",
+        data: [
+          "Install WP locally & on cPanel",
+          "Navigate dashboard & settings",
+          "Choose themes vs. builders",
+          "Manage users & roles securely",
         ],
       },
       {
