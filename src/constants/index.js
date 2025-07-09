@@ -325,3 +325,232 @@ export const DIGITALARTSDATA = [
     ],
   },
 ];
+
+export const VIDEOEDITINGDATA = [
+  {
+    name: "Video Editing",
+    title: "Video Editing",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/video-editing-zttpcf",
+    whyCourse: [
+      "In-demand skill across content & media industries",
+      "Learn both technical and creative editing skills",
+      "Practical hands-on learning with real editing tools",
+      "Opportunity to build a personal showreel",
+    ],
+    benefitsImg: "/images/course-section1-video.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "150,000",
+    courseOverview:
+      "This course is designed to take you from beginner to proficient video editor. You’ll learn the fundamentals of editing, transitions, sound design, and motion graphics using industry tools.",
+    courseContent: [
+      {
+        title: "Unit 1 - Foundations of Editing ",
+        data: [
+          "Navigate NLE interfaces (Capcut, Premiere, DaVinci)",
+          "Set project files & codecs correctly",
+          "Trim, ripple & roll edits with shortcuts",
+          "Organise footage with bins & markers",
+        ],
+      },
+      {
+        title: "Unit 2 - Storytelling Techniques ",
+        data: [
+          "Planning and conducting user interviews",
+          "Build pace with timing & rhythm",
+          "Use J‑/L‑cuts for seamless dialogue",
+          "Match action & maintain continuity",
+        ],
+      },
+      {
+        title: "Unit 3 - Audio, Music & Voice‑over",
+        data: [
+          "Sync external audio to video",
+          "Clean noisy dialogue with EQ & NR",
+          "Layer SFX & ambience for depth",
+          "Choose royalty‑free music that fits mood",
+        ],
+      },
+      {
+        title: " Unit 4 - Motion Graphics & Titles",
+        data: [
+          "Animate lower‑thirds in After Effects",
+          "Design kinetic typography templates",
+          "Apply tracking for on‑screen text",
+          "Export alpha‑channel graphics",
+        ],
+      },
+      {
+        title: "Unit 5 - Color Correction & Grading ",
+        data: [
+          "Balance exposure & white‑balance",
+          "Use scopes (waveform, vectorscope)",
+          "Create LUT‑based creative looks",
+          "Version grades for different outputs",
+        ],
+      },
+      {
+        title: " Unit 6 - Portfolio Film Project",
+        data: [
+          "Deliver master & social‑cut exports",
+          "Collaborate with a sound designer",
+          "Develop an edit brief & shot list",
+          "Present reel & receive peer critiquet",
+        ],
+      },
+    ],
+  },
+];
+export const SOCIALMEDIADATA = [
+  {
+    name: "Social Media Management",
+    title: "Social Media Management",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/social-media-management-sgkyau",
+    whyCourse: [
+      "High-demand role in every modern brand",
+      "Master all major platforms (Instagram, TikTok, X, etc.)",
+      "Learn content scheduling, analysis, and engagement",
+      "Strategy-focused with real-world case studies",
+    ],
+    benefitsImg: "/images/course-section1-social.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "Learn how to develop and manage brand voice across platforms. You'll understand how to plan calendars, run campaigns, and measure performance like a pro.",
+    courseContent: [
+      {
+        title: "Unit 1 - Platform Ecosystem",
+        data: [
+          "Compare algorithms on IG, TikTok, X, and more",
+          "Identify content formats per platform",
+          "Map user personas & behaviour",
+          "Set SMART goals per channel",
+        ],
+      },
+      {
+        title: "Unit 2 - Branding & Strategy",
+        data: [
+          "Create visual style kits & templates",
+          "Write captions that spark dialogue",
+          "Maintain consistency across posts",
+          "Craft brand tone guidelines",
+        ],
+      },
+      {
+        title: "Unit 3 - Scheduling Tools & Analytics",
+        data: [
+          "Build 30‑day content calendars",
+          "Automate posts with Buffer/Later",
+          "Time content to peak engagement hour",
+          "Repurpose long‑form into micro‑content",
+        ],
+      },
+      {
+        title: " Unit 4 - Community Management",
+        data: [
+          "Track KPIs in native insights & GA4",
+          "Interpret reach vs. engagement vs. ROI",
+          "A/B test creatives & CTAs",
+          "Produce monthly performance reports",
+        ],
+      },
+      {
+        title: "Unit 5 - Real-time Campaign Creation",
+        data: [
+          "Set escalation paths for complaints",
+          "Moderate comments & DMs professionally",
+          "Run social listening with keywords",
+          "Engage micro‑influencers & ambassadors",
+        ],
+      },
+    ],
+  },
+];
+export const CONTENTWRITINGDATA = [
+  {
+    name: "Content Writing",
+    title: "Content Writing",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/content-writing-tapged",
+    whyCourse: [
+      "Core skill in digital marketing & media",
+      "Learn to write blogs, SEO articles, copies & more",
+      "Practice editing, tone, and storytelling",
+      "Create your own content portfolio",
+    ],
+    benefitsImg: "/images/course-section1-content.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "From ideation to publishing, you’ll master content development for digital platforms. Learn to write for people and search engines while maintaining originality and quality",
+    courseContent: [
+      {
+        title: "Unit 1 - Writing Fundamentals",
+        data: [
+          "Apply the inverted pyramid structure",
+          "Harness active voice & clarity",
+          "Avoid common grammar pitfalls",
+          "Create compelling headlines",
+        ],
+      },
+      {
+        title: "Unit 2 - SEO & Web Copy",
+        data: [
+          "Conduct keyword research (Ahrefs/SEMrush)",
+          "Optimise meta titles & snippets",
+          "Structure articles for readability (H2/H3)",
+          "Embed internal & external links wisely",
+        ],
+      },
+      {
+        title: "Unit 3 - Editing & Proofreading",
+        data: [
+          "Build self‑editing checklists",
+          "Use style guides (AP, Chicago, etc.)",
+          "Leverage tools (Grammarly, Hemingway)",
+          "Fact‑check with credible sources",
+        ],
+      },
+      {
+        title: " Unit 4 - Brand Story & Tonet",
+        data: [
+          "Develop brand storytelling frameworks",
+          "Switch tones for different audiences",
+          "Write persuasive CTAs & hooks",
+          "Maintain consistency across channels",
+        ],
+      },
+      {
+        title: "Unit 5 - Content Strategy & Portfolio",
+        data: [
+          "Map customer journey to content funnel",
+          "Plan editorial calendars with pillars",
+          "Measure content performance metrics",
+          "Curate samples into a personal portfolios",
+        ],
+      },
+    ],
+  },
+];

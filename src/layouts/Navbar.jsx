@@ -98,6 +98,7 @@ const courses = [
   { title: "Frontend Web Development", href: "/courses/frontend-web-development" },
   { title: "Backend Web Development", href: "/courses/backend-web-development" },
   { title: "Mobile App Development", href: "/courses/mobile-app-development" },
+  { title: "Digital Arts", href: "/courses/digital-art" },
 ];
 
 const CourseItem = ({ title, href, className }) => {
