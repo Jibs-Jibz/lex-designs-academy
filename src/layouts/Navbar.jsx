@@ -92,6 +92,7 @@ const courses = [
   { title: "Video Editing", href: "/courses/video-editing" },
   { title: "Social Media Management", href: "/courses/social-media-management" },
   { title: "Content Writing", href: "/courses/content-writing" },
+  { title: "Content Creation", href: "/courses/content-creation" },
   { title: "Digital Marketing", href: "/courses/digital-marketing" },
   { title: "Virtual Assistant", href: "/courses/virtual-assistant" },
   { title: "Web Design (WordPress)", href: "/courses/web-design" },

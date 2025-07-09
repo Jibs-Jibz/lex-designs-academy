@@ -554,3 +554,220 @@ export const CONTENTWRITINGDATA = [
     ],
   },
 ];
+export const CONTENTCREATIONGDATA = [
+  {
+    name: "Content Creation",
+    title: "Content Creation",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/content-creation-ambjwj",
+    whyCourse: [
+      "Master tools like Canva, CapCut, and mobile editing apps",
+      "Gain confidence in personal branding and delivery",
+      "Build a content portfolio that gets attention",
+      "Learn storytelling for all formats: video, audio, text",
+    ],
+    benefitsImg: "/images/course-section1-creation.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course teaches you how to ideate, plan, create, and publish professional-level content for digital platforms. Perfect for aspiring influencers, brand creators, and marketers.",
+    courseContent: [
+      {
+        title: "Unit 1 - Ideation & Scripting",
+        data: [
+          "Generate ideas with brainstorming grids",
+          "Draft video scripts & storyboards",
+          "Align concepts to audience pain points",
+          "Create shot lists & prop lists",
+        ],
+      },
+      {
+        title: "Unit 2 - Filming Techniques",
+        data: [
+          "Set up lighting for small studios",
+          "Use smartphones vs. DSLRs effectively",
+          "Capture clean audio with mics",
+          "Frame shots with composition rules",
+        ],
+      },
+      {
+        title: "Unit 3 - On‑Camera Presence",
+        data: [
+          "Master body language & eye‑line",
+          "Warm‑up voice & maintain energy",
+          "Read from teleprompters naturally",
+          "Handle live Q&A confidently",
+        ],
+      },
+      {
+        title: " Unit 4 - Post‑Production Workflow",
+        data: [
+          "Organise media & backups",
+          "Edit for multiple aspect ratios",
+          "Add captions & graphics for accessibility",
+          "Optimise file sizes for web",
+        ],
+      },
+      {
+        title: "Unit 5 - Publishing & Monetization",
+        data: [
+          "Choose the right platforms & formats",
+          "Apply SEO tags & descriptions",
+          "Cross‑promote on social media",
+          "Explore monetization (ads, sponsorship)",
+        ],
+      },
+    ],
+  },
+];
+export const DIGITALMARKETINGDATA = [
+  {
+    name: "Digital Marketing",
+    title: "Digital Marketing",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/digital-marketing-mirwzr",
+    whyCourse: [
+      "Learn SEO, paid ads, email, content, and social media",
+      "Stay ahead with up-to-date tools and strategies",
+      "Gain practical skills via campaign simulations",
+      "Understand analytics and data-driven marketing",
+    ],
+    benefitsImg: "/images/course-section1-digital.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "150,000",
+    courseOverview:
+      "This course prepares you for careers in advertising, marketing, and e-commerce by teaching you how to build and run full-funnel digital campaigns across multiple platforms.",
+    courseContent: [
+      {
+        title: "Unit 1 - Digital Marketing Landscape",
+        data: [
+          "Understand PESO model (Paid, Earned…)Map customer journey online",
+          "Identify key channels & tactics",
+          "Set campaign objectives & KPIs",
+        ],
+      },
+      {
+        title: "Unit 2 - Search Engine Marketing",
+        data: [
+          "Build keyword lists & ad groups",
+          "Write high‑converting ad copy",
+          "Optimise landing pages for Quality Score",
+          "Track conversions in Google Ads",
+        ],
+      },
+      {
+        title: "Unit 3 - Social & Display Advertising",
+        data: [
+          "Design creatives for Meta Ads Manager",
+          "Retarget warm audiences",
+          "Allocate budgets & bidding strategies",
+          "A/B test audience segments",
+        ],
+      },
+      {
+        title: " Unit 4 - Email Marketing & Automation",
+        data: [
+          "Grow opt‑in lists ethically",
+          "Craft drip sequences & newsletters",
+          "Use segmentation & personalization",
+          "Analyse open, click & churn rates",
+        ],
+      },
+      {
+        title: "Unit 5 - Analytics & Data Studio",
+        data: [
+          "Set up GA4 events & funnels",
+          "Create dashboards in Looker Studio",
+          "Calculate ROI & attribution",
+          "Turn insights into optimisation actions",
+        ],
+      },
+    ],
+  },
+];
+export const VIRTUALASSISTANCEDATA = [
+  {
+    name: "Virtual Assistance",
+    title: "Virtual Assistance",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/virtual-assistance-ttxlyx",
+    whyCourse: [
+      "Learn SEO, paid ads, email, content, and social media",
+      "Stay ahead with up-to-date tools and strategies",
+      "Gain practical skills via campaign simulations",
+      "Understand analytics and data-driven marketing",
+    ],
+    benefitsImg: "/images/course-section1-creation.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course prepares you for careers in advertising, marketing, and e-commerce by teaching you how to build and run full-funnel digital campaigns across multiple platforms.",
+    courseContent: [
+      {
+        title: "Unit 1 - Digital Marketing Landscape",
+        data: [
+          "Understand PESO model (Paid, Earned…)Map customer journey online",
+          "Identify key channels & tactics",
+          "Set campaign objectives & KPIs",
+        ],
+      },
+      {
+        title: "Unit 2 - Search Engine Marketing",
+        data: [
+          "Build keyword lists & ad groups",
+          "Write high‑converting ad copy",
+          "Optimise landing pages for Quality Score",
+          "Track conversions in Google Ads",
+        ],
+      },
+      {
+        title: "Unit 3 - Social & Display Advertising",
+        data: [
+          "Design creatives for Meta Ads Manager",
+          "Retarget warm audiences",
+          "Allocate budgets & bidding strategies",
+          "A/B test audience segments",
+        ],
+      },
+      {
+        title: " Unit 4 - Email Marketing & Automation",
+        data: [
+          "Grow opt‑in lists ethically",
+          "Craft drip sequences & newsletters",
+          "Use segmentation & personalization",
+          "Analyse open, click & churn rates",
+        ],
+      },
+      {
+        title: "Unit 5 - Analytics & Data Studio",
+        data: [
+          "Set up GA4 events & funnels",
+          "Create dashboards in Looker Studio",
+          "Calculate ROI & attribution",
+          "Turn insights into optimisation actions",
+        ],
+      },
+    ],
+  },
+];
