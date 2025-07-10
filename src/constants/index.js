@@ -774,26 +774,26 @@ export const VIRTUALASSISTANCEDATA = [
 ];
 export const WEBDESIGNDATA = [
   {
-  name: "Web Design (WordPress)",
+    name: "Web Design (WordPress)",
     title: "Web Design (WordPress)",
     text: "Learn from Beginner to Intermediate level",
     duration: "6 months",
     unit: "6 units",
-    link: "https://paystack.com/buy/digital-marketing-mirwzr",
+    link: "https://paystack.com/buy/web-design-wordpress-hovqpj",
     whyCourse: [
       "Build real websites using WordPress and Elementor",
       "Learn design fundamentals and user flow",
       "Gain experience with client-ready projects",
       "Monetize your skills with freelance or agency work",
     ],
-    benefitsImg: "/images/course-section1-digital.jpeg",
+    benefitsImg: "/images/course-section1-web-design.jpeg",
     benefits: [
       "Hands on learning",
       "Comprehensive curriculum",
       "Supportive community",
       "Certificate of completion",
     ],
-    coursePrice: "150,000",
+    coursePrice: "100,000",
     courseOverview:
       "This course introduces you to WordPress website design from setup to launch. You’ll learn how to create pages, customize themes, add plugins, and design for user experience",
     courseContent: [
@@ -807,39 +807,103 @@ export const WEBDESIGNDATA = [
         ],
       },
       {
-        title: "Unit 2 - Search Engine Marketing",
+        title: "Unit 2 - Visual Design Principles",
         data: [
-          "Build keyword lists & ad groups",
-          "Write high‑converting ad copy",
-          "Optimise landing pages for Quality Score",
-          "Track conversions in Google Ads",
+          "Apply grids & spacing effectively",
+          "WPair typography & colour palettes",
+          "Optimise for accessibility (WCAG)",
+          "Create design moodboards",
         ],
       },
       {
-        title: "Unit 3 - Social & Display Advertising",
+        title: "Unit 3 - Theme Customization",
         data: [
-          "Design creatives for Meta Ads Manager",
-          "Retarget warm audiences",
-          "Allocate budgets & bidding strategies",
-          "A/B test audience segments",
+          "Use page builders (Elementor, Divi)",
+          "Edit child themes safely",
+          "Add global style presets",
+          "Implement custom headers & footers",
         ],
       },
       {
-        title: " Unit 4 - Email Marketing & Automation",
+        title: " Unit 4 - Plugins & Functionality",
         data: [
-          "Grow opt‑in lists ethically",
-          "Craft drip sequences & newsletters",
-          "Use segmentation & personalization",
-          "Analyse open, click & churn rates",
+          "elect essential plugins (SEO, cache, etc.)",
+          "Configure forms & pop‑ups",
+          "Implement e‑commerce with Woo",
+          "Keep plugins updated & secure",
+        ],
+      },
+    ],
+  },
+];
+export const FRONTENDDATA = [
+  {
+    name: "Front-End Web Development",
+    title: "Front-End Web Development",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/front-end-web-development-ierzzl",
+    whyCourse: [
+      "Learn HTML, CSS, JavaScript, and React basics",
+      "Build responsive websites and web apps",
+      "Get hands-on with tools like Git and VS Code",
+      "Start your journey into tech or freelancing",
+    ],
+    benefitsImg: "/images/course-section1-frontend.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "150,000",
+    courseOverview:
+      "You’ll learn to code websites from scratch, using front-end languages and libraries. This course builds both your logic and creativity for real-world development.",
+    courseContent: [
+      {
+        title: "Unit 1 - HTML & CSS Fundamentals",
+        data: [
+          "Structure pages with semantic tags",
+          "Style elements with flexbox & grid",
+          "Implement responsive breakpoints themes vs. builders",
+          "Validate code with W3C tools",
         ],
       },
       {
-        title: "Unit 5 - Analytics & Data Studio",
+        title: "Unit 2 - JavaScript Essentials",
         data: [
-          "Set up GA4 events & funnels",
-          "Create dashboards in Looker Studio",
-          "Calculate ROI & attribution",
-          "Turn insights into optimisation actions",
+          "Master ES6 syntax & modules",
+          "Manipulate DOM dynamically",
+          "Handle events & forms",
+          "Debug with devtools console",
+        ],
+      },
+      {
+        title: "Unit 3 - Frameworks (React)",
+        data: [
+          "Build components & props/state",
+          "Use hooks for side‑effects",
+          "Manage routing with React Router",
+          "Optimise performance with memoization",
+        ],
+      },
+      {
+        title: " Unit 4 - UI Libraries & Tooling",
+        data: [
+          "Style with Tailwind or Material UI",
+          "Bundle code via Vite/Webpack",
+          "Lint & format with ESLint/Prettier",
+          "Version‑control with Git & GitHub",
+        ],
+      },
+      {
+        title: " Unit 5 - Testing & Accessibility",
+        data: [
+          "Write unit tests with Jest",
+          "Run e2e tests with Playwright",
+          "Audit a11y with Lighthouse",
+          "Implement keyboard navigation",
         ],
       },
     ],
