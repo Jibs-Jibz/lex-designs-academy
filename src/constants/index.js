@@ -909,3 +909,149 @@ export const FRONTENDDATA = [
     ],
   },
 ];
+export const BACKENDDATA = [
+  {
+    name: "Back-End Web Development",
+    title: "Back-End Web Development",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/back-end-web-development-aoqrfs",
+    whyCourse: [
+      "Master backend logic, APIs, and databases",
+      "Learn Node.js, Express, and MongoDB or SQL",
+      "Understand server architecture and deployment",
+      "Build scalable and secure systems",
+    ],
+    benefitsImg: "/images/course-section1-backend.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course takes you behind the scenes of web applications, teaching you to build databases, APIs, authentication systems, and scalable backend logic.",
+    courseContent: [
+      {
+        title: "Unit 1 - Server Environment & Git",
+        data: [
+          "Configure Node or Python envs",
+          "Manage dependencies with npm/pip",
+          "using Git branching strategies",
+          "Set up local REST API Servers",
+        ],
+      },
+      {
+        title: "Unit 2 - Databases & ORM",
+        data: [
+          "Model data with ER diagrams",
+          "Perform CRUD SQL queries",
+          "Integrate ORM (Sequelize, Prisma)",
+          "Secure connections & backups",
+        ],
+      },
+      {
+        title: "Unit 3 - RESTful API Design",
+        data: [
+          "Define endpoints & resources",
+          "Implement controllers & services",
+          "Handle pagination & filtering",
+          "Return proper status codes & errors",
+        ],
+      },
+      {
+        title: " Unit 4 - Authentication & Security",
+        data: [
+          "Hash passwords with bcrypt",
+          "Implement JWT & sessions",
+          "Prevent OWASP top 10 attacks",
+          "Rate‑limit & log requests",
+        ],
+      },
+      {
+        title: " Unit 5 - Deployment & Scaling",
+        data: [
+          "Containerize apps with Docker",
+          "Use CI/CD pipelines (GitHub Actions)",
+          "Deploy to AWS/GCP/Vercel",
+          "Monitor logs & metrics",
+        ],
+      },
+    ],
+  },
+];
+export const MOBILEAPPDATA = [
+  {
+    name: "Mobile App Development",
+    title: "Mobile App Development",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/mobile-app-development-odqmja",
+    whyCourse: [
+      "Build apps using React Native or Flutter",
+      "Work with real APIs, authentication, and storage",
+      "Learn UI design and native functionality",
+      "Publish your app to Play Store or App Store",
+    ],
+    benefitsImg: "/images/course-section1-mobile.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course teaches mobile development from start to finish. You’ll code apps using modern frameworks, learn user interface design, and publish your final product.",
+    courseContent: [
+      {
+        title: "Unit 1 - Mobile Ecosystem Overview",
+        data: [
+          "Compare native vs. cross‑platform",
+          "Set up dev environment (Android Studio/Expo)",
+          "Understand app lifecycle",
+          "Follow platform design guidelines",
+        ],
+      },
+      {
+        title: "Unit 2 - UI/UX for Mobile",
+        data: [
+          "Design layouts with Flexbox",
+          "Implement navigation patterns",
+          "Handle gestures & animations",
+          "Test on multiple screen sizes",
+        ],
+      },
+      {
+        title: "Unit 3 - State Management",
+        data: [
+          "Use React Native hooks & context",
+          "Persist data with AsyncStorage",
+          "Optimise renders & memory",
+          "RDebug with Flipper",
+        ],
+      },
+      {
+        title: " Unit 4 - Native Device APIs",
+        data: [
+          "Integrate camera & geolocation",
+          "Handle push notifications",
+          "Access file storage & permissions",
+          "Utilise sensors (accelerometer, gyroscope)",
+        ],
+      },
+      {
+        title: " Unit 5 - Backend Integration",
+        data: [
+          "Consume REST/GraphQL APIs",
+          "Implement realtime with WebSockets/Firebase",
+          "Manage auth flows (OAuth/JWT)",
+          "Handle offline caching & sync",
+        ],
+      },
+    ],
+  },
+];
