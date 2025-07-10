@@ -38,7 +38,7 @@ const MobileAppDevelopment = () => {
           {MOBILEAPPDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgMobile"
                 openModal={openModal}
                 element={element}
                 index={index}

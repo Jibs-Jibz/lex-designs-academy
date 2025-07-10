@@ -38,7 +38,7 @@ const BackEndDevelopment = () => {
           {BACKENDDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgBackEnd"
                 openModal={openModal}
                 element={element}
                 index={index}

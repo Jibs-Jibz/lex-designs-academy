@@ -35,7 +35,12 @@ const SocialMedia = () => {
         <div className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
           {SOCIALMEDIADATA.map((element, index) => (
             <>
-              <Header openModal={openModal} element={element} index={index} />
+              <Header
+                openModal={openModal}
+                element={element}
+                index={index}
+                className="!bg-courseBgSocial"
+              />
               <Section1 openModal={openModal} element={element} index={index} />
               <Section2 openModal={openModal} element={element} index={index} />
               <Modal isOpen={isModalOpen} onClose={closeModal}>

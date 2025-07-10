@@ -38,7 +38,7 @@ const FrontEndDevelopment = () => {
           {FRONTENDDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgFrontEnd"
                 openModal={openModal}
                 element={element}
                 index={index}

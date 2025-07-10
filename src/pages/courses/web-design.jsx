@@ -37,7 +37,7 @@ const WebDesign = () => {
           {WEBDESIGNDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgWebDesign"
                 openModal={openModal}
                 element={element}
                 index={index}

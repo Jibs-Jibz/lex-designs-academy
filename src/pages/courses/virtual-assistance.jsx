@@ -37,7 +37,7 @@ const VirtualAssistance = () => {
           {VIRTUALASSISTANCEDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgVirtual"
                 openModal={openModal}
                 element={element}
                 index={index}

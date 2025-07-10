@@ -37,7 +37,7 @@ const ContentWriting = () => {
           {CONTENTWRITINGDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgContent"
                 openModal={openModal}
                 element={element}
                 index={index}

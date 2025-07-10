@@ -35,7 +35,12 @@ const VideoEditing = () => {
         <div className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
           {VIDEOEDITINGDATA.map((element, index) => (
             <>
-              <Header openModal={openModal} element={element} index={index} />
+              <Header
+                openModal={openModal}
+                element={element}
+                index={index}
+                className="!bg-courseBgVideo"
+              />
               <Section1 openModal={openModal} element={element} index={index} />
               <Section2 openModal={openModal} element={element} index={index} />
               <Modal isOpen={isModalOpen} onClose={closeModal}>
