@@ -34,7 +34,7 @@ export const COURSES = [
     img: "/images/section2-3.png",
     title: "Digital art",
     text: "We help unleash your different creativity, refine your skills, and also help you create captivating digital masterpieces that leaves a lasting impression.",
-    path: "/courses/digital-art",
+    path: "/courses/digital-arts",
   },
 ];
 
@@ -699,14 +699,14 @@ export const DIGITALMARKETINGDATA = [
     ],
   },
 ];
-export const VIRTUALASSISTANCEDATA = [
+export const VIRTUALAssistantDATA = [
   {
-    name: "Virtual Assistance",
-    title: "Virtual Assistance",
+    name: "Virtual Assistant",
+    title: "Virtual Assistant",
     text: "Learn from Beginner to Intermediate level",
     duration: "6 months",
     unit: "6 units",
-    link: "https://paystack.com/buy/virtual-assistance-ttxlyx",
+    link: "https://paystack.com/buy/virtual-assistant-ttxlyx",
     whyCourse: [
       "Learn real-world VA skills for remote work",
       "Master admin tools like Google Workspace and Trello",
