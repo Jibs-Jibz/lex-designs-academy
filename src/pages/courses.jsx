@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Clock, Users, Award, BookOpen } from "lucide-react";
 
 // Course data - combining all the course information
-const ALL_COURSES = [
+export const ALL_COURSES = [
   {
     id: "ui-ux-design",
     title: "UI/UX Design",
@@ -275,7 +275,7 @@ const WHATWEOFFER = [
   },
 ];
 
-const CourseCard = ({ course, index }) => {
+export const CourseCard = ({ course, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

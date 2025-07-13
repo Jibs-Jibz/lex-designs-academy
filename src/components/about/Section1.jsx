@@ -21,14 +21,14 @@ const Section1 = () => {
           <div className=" flex flex-col gap-6 md:gap-3 ">
             {" "}
             <h2 className="text-lexPrimary text-[45px] lg:text-[32px] md:text-[24px] font-semibold ">
-              Who We Are For? Choose MERP Design Academy
+              Who We Are For? Choose MERP Academy
             </h2>
             <p className="md:leading-relaxed text-lg lg:text-sm font-inter font-normal ">
-              MERP Design Academy is tailored for individuals with a drive for
+              MERP Academy is tailored for individuals with a drive for
               excellence and an unwavering commitment to success. Whether you
               are an aspiring designer seeking to refine your craft or a career
               transitioner aiming to immerse yourself in the realm of design,
-              MERP Design Academy stands as your dedicated ally on this journey.
+              MERP Academy stands as your dedicated ally on this journey.
             </p>
           </div>
           <div className=" flex flex-col gap-6 md:gap-3 ">

@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>MERP Design Academy</title>
+        <title>MERP Academy</title>
         <meta
           name="description"
           content="An online platform dedicated to empowering individuals with the skills and knowledge needed to succeed and are passionate about making a positive impact through your learnings. || MERP Design Academy"

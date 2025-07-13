@@ -9,10 +9,10 @@ const contact = () => {
   return (
     <>
       <Head>
-        <title>Contact Us || MERP Design Academy</title>
+        <title>Contact Us || MERP Academy</title>
         <meta
           name="description"
-          content="Don't hesitate to get in touch with us. We're here to assist you. || MERP Design Academy"
+          content="Don't hesitate to get in touch with us. We're here to assist you. || MERP Academy"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

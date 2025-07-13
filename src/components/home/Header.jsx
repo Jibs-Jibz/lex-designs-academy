@@ -48,12 +48,13 @@ const Header = ({ id }) => {
           className="w-1/2  flex flex-col justify-around  gap-11 md:gap-6 lg:w-full"
         >
           <h1 className=" text-6xl lg:text-[42px] md:leading-10 md:text-[36px] font-semibold ">
-            Elevate your <span className=" py-20"> learning with our </span>  Tech courses
+            Elevate your <span className=" py-20"> learning with our </span>{" "}
+            Tech courses
           </h1>
           <p className=" text-lg md:text-sm md:leading-relaxed font-inter leading-7 font-normal ">
-            Joining MERP Design academy is the perfect way to learn any skill.
-            With our state-of-the-art learning tools and resources, you can
-            master any skill at your own pace.
+            Joining MERP academy is the perfect way to learn any skill. With our
+            state-of-the-art learning tools and resources, you can master any
+            skill at your own pace.
           </p>
           <div>
             <Button1
@@ -93,7 +94,7 @@ const Header = ({ id }) => {
           className="w-1/2  flex flex-col justify-around  gap-11 md:gap-6 lg:w-full"
         >
           <h2 className=" text-[45px]  lg:text-[32px] md:text-[24px] font-semibold ">
-            Discover who we are as a design academy{" "}
+            Discover who we are as a  academy{" "}
           </h2>
           <p className=" text-lg lg:text-sm font-inter font-normal md:leading-relaxed ">
             We are a leading online platform dedicated to empowering individuals

@@ -49,7 +49,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-lg lg:text-base md:text-sm font-medium leading-8">
-              Joining LEX Design academy is the perfect way to learn any skill,
+              Joining MERP academy is the perfect way to learn any skill,
               anywhere. With our state-of-the-art learning tools and resources,
               you can master any skill at your own pace.
             </p>
@@ -219,7 +219,7 @@ const Footer = () => {
 
       <div className="xl:min-h-full w-full py-[47px] flex items-start justify-center border-t border-t-[#B9B9B9]">
         <span className="text-white hover:text-white w-fit text-xl xl:text-lg md:text-sm sm:text-[12px]">
-          @LEX design academy,2025. All Rights Reserved.
+          @MERP  academy,2025. All Rights Reserved.
         </span>
       </div>
     </div>

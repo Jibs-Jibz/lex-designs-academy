@@ -1,1 +1,1 @@
-#Repo for MERP Designs Academy formerly Lex Designs Academy
+#Repo for MERP Academy formerly Lex Designs Academy

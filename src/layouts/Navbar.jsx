@@ -224,14 +224,14 @@ const Navbar = () => {
             <Image
               className=" dark:hidden h-auto w-60 "
               src={logoMerp || "/placeholder.svg"}
-              alt="lex-designs"
+              alt="merp-designs"
               priority
               sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
             />
             <Image
               className=" hidden dark:flex h-auto w-full "
               src={logoMerp || "/placeholder.svg"}
-              alt="lex-designs"
+              alt="merp-designs"
               priority
               sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
             />
