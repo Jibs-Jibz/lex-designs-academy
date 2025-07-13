@@ -3,7 +3,7 @@ import Section1 from "@/components/courses/Section1";
 import Section2 from "@/components/courses/Section2";
 import Modal from "@/components/modals/Modal";
 import PaymentModal from "@/components/modals/PaymentModal";
-import { CONTENTWRITINGDATA } from "@/constants";
+import { FRONTENDDATA } from "@/constants";
 import Layout from "@/layouts/Layout";
 import React, { useState } from "react";
 import Section3 from "@/components/home/Section3";
@@ -13,7 +13,8 @@ import Reviews from "@/components/Reviews";
 
 import TransitionEffect from "@/components/TransitionEffect";
 import PaymentForm from "@/components/modals/PaymentForm";
-const ContentWriting = () => {
+
+const FrontEndDevelopment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -34,10 +35,10 @@ const ContentWriting = () => {
       <TransitionEffect />
       <Layout>
         <div className=" flex flex-col gap-32 xl:gap-24 lg:gap-14 md:gap-8 ">
-          {CONTENTWRITINGDATA.map((element, index) => (
+          {FRONTENDDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgContent"
+                className="!bg-courseBgFrontEnd"
                 openModal={openModal}
                 element={element}
                 index={index}
@@ -67,4 +68,4 @@ const ContentWriting = () => {
   );
 };
 
-export default ContentWriting;
+export default FrontEndDevelopment;

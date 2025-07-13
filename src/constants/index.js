@@ -708,12 +708,12 @@ export const VIRTUALASSISTANCEDATA = [
     unit: "6 units",
     link: "https://paystack.com/buy/virtual-assistance-ttxlyx",
     whyCourse: [
-      "Learn SEO, paid ads, email, content, and social media",
-      "Stay ahead with up-to-date tools and strategies",
-      "Gain practical skills via campaign simulations",
-      "Understand analytics and data-driven marketing",
+      "Learn real-world VA skills for remote work",
+      "Master admin tools like Google Workspace and Trello",
+      "Build service packages and attract global clients",
+      "Start freelancing with confidence",
     ],
-    benefitsImg: "/images/course-section1-creation.jpeg",
+    benefitsImg: "/images/course-section-virtual.jpeg",
     benefits: [
       "Hands on learning",
       "Comprehensive curriculum",
@@ -722,50 +722,334 @@ export const VIRTUALASSISTANCEDATA = [
     ],
     coursePrice: "100,000",
     courseOverview:
-      "This course prepares you for careers in advertising, marketing, and e-commerce by teaching you how to build and run full-funnel digital campaigns across multiple platforms.",
+      "This course equips you with virtual assistant skills for administrative, content, customer support, and scheduling tasks, along with client onboarding and remote communication",
     courseContent: [
       {
-        title: "Unit 1 - Digital Marketing Landscape",
+        title: "Unit 1 - VA Essentials",
         data: [
-          "Understand PESO model (Paid, Earned…)Map customer journey online",
-          "Identify key channels & tactics",
-          "Set campaign objectives & KPIs",
+          "Define VA scope & service niches",
+          "Set up home office tools efficiently",
+          "Master time‑tracking & invoicing",
+          "Establish clear client communication",
         ],
       },
       {
-        title: "Unit 2 - Search Engine Marketing",
+        title: "Unit 2 - Administrative Support",
         data: [
-          "Build keyword lists & ad groups",
-          "Write high‑converting ad copy",
-          "Optimise landing pages for Quality Score",
-          "Track conversions in Google Ads",
+          "Manage calendars & inboxes",
+          "Coordinate travel & meetings",
+          "Create professional documents & slides",
+          "Maintain digital filing systems",
         ],
       },
       {
-        title: "Unit 3 - Social & Display Advertising",
+        title: "Unit 3 - Social & Content Tasks",
         data: [
-          "Design creatives for Meta Ads Manager",
-          "Retarget warm audiences",
-          "Allocate budgets & bidding strategies",
-          "A/B test audience segments",
+          "Schedule posts with Hootsuite/Buffer",
+          "Draft basic blog posts & emails",
+          "Design quick graphics in Canva",
+          "Monitor comments & respond",
         ],
       },
       {
-        title: " Unit 4 - Email Marketing & Automation",
+        title: " Unit 4 - Customer & Sales Support",
         data: [
-          "Grow opt‑in lists ethically",
-          "Craft drip sequences & newsletters",
-          "Use segmentation & personalization",
-          "Analyse open, click & churn rates",
+          "Use CRM tools (HubSpot, Pipedrive)",
+          "Process orders & refunds",
+          "UHandle live chat & ticket systems",
+          "Upsell & cross‑sell politely",
         ],
       },
       {
-        title: "Unit 5 - Analytics & Data Studio",
+        title: "Unit 5 - Business Growth & Ethics",
         data: [
-          "Set up GA4 events & funnels",
-          "Create dashboards in Looker Studio",
-          "Calculate ROI & attribution",
-          "Turn insights into optimisation actions",
+          "Price services & negotiate retainers",
+          "Draft contracts & NDAs",
+          "Uphold data privacy & security",
+          "Build testimonials & referrals pipeline",
+        ],
+      },
+    ],
+  },
+];
+export const WEBDESIGNDATA = [
+  {
+    name: "Web Design (WordPress)",
+    title: "Web Design (WordPress)",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/web-design-wordpress-hovqpj",
+    whyCourse: [
+      "Build real websites using WordPress and Elementor",
+      "Learn design fundamentals and user flow",
+      "Gain experience with client-ready projects",
+      "Monetize your skills with freelance or agency work",
+    ],
+    benefitsImg: "/images/course-section1-web-design.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course introduces you to WordPress website design from setup to launch. You’ll learn how to create pages, customize themes, add plugins, and design for user experience",
+    courseContent: [
+      {
+        title: "Unit 1 - WordPress Basics",
+        data: [
+          "Install WP locally & on cPanel",
+          "Navigate dashboard & settings",
+          "Choose themes vs. builders",
+          "Manage users & roles securely",
+        ],
+      },
+      {
+        title: "Unit 2 - Visual Design Principles",
+        data: [
+          "Apply grids & spacing effectively",
+          "WPair typography & colour palettes",
+          "Optimise for accessibility (WCAG)",
+          "Create design moodboards",
+        ],
+      },
+      {
+        title: "Unit 3 - Theme Customization",
+        data: [
+          "Use page builders (Elementor, Divi)",
+          "Edit child themes safely",
+          "Add global style presets",
+          "Implement custom headers & footers",
+        ],
+      },
+      {
+        title: " Unit 4 - Plugins & Functionality",
+        data: [
+          "elect essential plugins (SEO, cache, etc.)",
+          "Configure forms & pop‑ups",
+          "Implement e‑commerce with Woo",
+          "Keep plugins updated & secure",
+        ],
+      },
+    ],
+  },
+];
+export const FRONTENDDATA = [
+  {
+    name: "Front-End Web Development",
+    title: "Front-End Web Development",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/front-end-web-development-ierzzl",
+    whyCourse: [
+      "Learn HTML, CSS, JavaScript, and React basics",
+      "Build responsive websites and web apps",
+      "Get hands-on with tools like Git and VS Code",
+      "Start your journey into tech or freelancing",
+    ],
+    benefitsImg: "/images/course-section1-frontend.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "150,000",
+    courseOverview:
+      "You’ll learn to code websites from scratch, using front-end languages and libraries. This course builds both your logic and creativity for real-world development.",
+    courseContent: [
+      {
+        title: "Unit 1 - HTML & CSS Fundamentals",
+        data: [
+          "Structure pages with semantic tags",
+          "Style elements with flexbox & grid",
+          "Implement responsive breakpoints themes vs. builders",
+          "Validate code with W3C tools",
+        ],
+      },
+      {
+        title: "Unit 2 - JavaScript Essentials",
+        data: [
+          "Master ES6 syntax & modules",
+          "Manipulate DOM dynamically",
+          "Handle events & forms",
+          "Debug with devtools console",
+        ],
+      },
+      {
+        title: "Unit 3 - Frameworks (React)",
+        data: [
+          "Build components & props/state",
+          "Use hooks for side‑effects",
+          "Manage routing with React Router",
+          "Optimise performance with memoization",
+        ],
+      },
+      {
+        title: " Unit 4 - UI Libraries & Tooling",
+        data: [
+          "Style with Tailwind or Material UI",
+          "Bundle code via Vite/Webpack",
+          "Lint & format with ESLint/Prettier",
+          "Version‑control with Git & GitHub",
+        ],
+      },
+      {
+        title: " Unit 5 - Testing & Accessibility",
+        data: [
+          "Write unit tests with Jest",
+          "Run e2e tests with Playwright",
+          "Audit a11y with Lighthouse",
+          "Implement keyboard navigation",
+        ],
+      },
+    ],
+  },
+];
+export const BACKENDDATA = [
+  {
+    name: "Back-End Web Development",
+    title: "Back-End Web Development",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/back-end-web-development-aoqrfs",
+    whyCourse: [
+      "Master backend logic, APIs, and databases",
+      "Learn Node.js, Express, and MongoDB or SQL",
+      "Understand server architecture and deployment",
+      "Build scalable and secure systems",
+    ],
+    benefitsImg: "/images/course-section1-backend.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course takes you behind the scenes of web applications, teaching you to build databases, APIs, authentication systems, and scalable backend logic.",
+    courseContent: [
+      {
+        title: "Unit 1 - Server Environment & Git",
+        data: [
+          "Configure Node or Python envs",
+          "Manage dependencies with npm/pip",
+          "using Git branching strategies",
+          "Set up local REST API Servers",
+        ],
+      },
+      {
+        title: "Unit 2 - Databases & ORM",
+        data: [
+          "Model data with ER diagrams",
+          "Perform CRUD SQL queries",
+          "Integrate ORM (Sequelize, Prisma)",
+          "Secure connections & backups",
+        ],
+      },
+      {
+        title: "Unit 3 - RESTful API Design",
+        data: [
+          "Define endpoints & resources",
+          "Implement controllers & services",
+          "Handle pagination & filtering",
+          "Return proper status codes & errors",
+        ],
+      },
+      {
+        title: " Unit 4 - Authentication & Security",
+        data: [
+          "Hash passwords with bcrypt",
+          "Implement JWT & sessions",
+          "Prevent OWASP top 10 attacks",
+          "Rate‑limit & log requests",
+        ],
+      },
+      {
+        title: " Unit 5 - Deployment & Scaling",
+        data: [
+          "Containerize apps with Docker",
+          "Use CI/CD pipelines (GitHub Actions)",
+          "Deploy to AWS/GCP/Vercel",
+          "Monitor logs & metrics",
+        ],
+      },
+    ],
+  },
+];
+export const MOBILEAPPDATA = [
+  {
+    name: "Mobile App Development",
+    title: "Mobile App Development",
+    text: "Learn from Beginner to Intermediate level",
+    duration: "6 months",
+    unit: "6 units",
+    link: "https://paystack.com/buy/mobile-app-development-odqmja",
+    whyCourse: [
+      "Build apps using React Native or Flutter",
+      "Work with real APIs, authentication, and storage",
+      "Learn UI design and native functionality",
+      "Publish your app to Play Store or App Store",
+    ],
+    benefitsImg: "/images/course-section1-mobile.jpeg",
+    benefits: [
+      "Hands on learning",
+      "Comprehensive curriculum",
+      "Supportive community",
+      "Certificate of completion",
+    ],
+    coursePrice: "100,000",
+    courseOverview:
+      "This course teaches mobile development from start to finish. You’ll code apps using modern frameworks, learn user interface design, and publish your final product.",
+    courseContent: [
+      {
+        title: "Unit 1 - Mobile Ecosystem Overview",
+        data: [
+          "Compare native vs. cross‑platform",
+          "Set up dev environment (Android Studio/Expo)",
+          "Understand app lifecycle",
+          "Follow platform design guidelines",
+        ],
+      },
+      {
+        title: "Unit 2 - UI/UX for Mobile",
+        data: [
+          "Design layouts with Flexbox",
+          "Implement navigation patterns",
+          "Handle gestures & animations",
+          "Test on multiple screen sizes",
+        ],
+      },
+      {
+        title: "Unit 3 - State Management",
+        data: [
+          "Use React Native hooks & context",
+          "Persist data with AsyncStorage",
+          "Optimise renders & memory",
+          "RDebug with Flipper",
+        ],
+      },
+      {
+        title: " Unit 4 - Native Device APIs",
+        data: [
+          "Integrate camera & geolocation",
+          "Handle push notifications",
+          "Access file storage & permissions",
+          "Utilise sensors (accelerometer, gyroscope)",
+        ],
+      },
+      {
+        title: " Unit 5 - Backend Integration",
+        data: [
+          "Consume REST/GraphQL APIs",
+          "Implement realtime with WebSockets/Firebase",
+          "Manage auth flows (OAuth/JWT)",
+          "Handle offline caching & sync",
         ],
       },
     ],

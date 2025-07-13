@@ -37,7 +37,7 @@ const ContentCreation = () => {
           {CONTENTCREATIONGDATA.map((element, index) => (
             <>
               <Header
-                className="!bg-courseBgGraphics"
+                className="!bg-courseBgContentCreation"
                 openModal={openModal}
                 element={element}
                 index={index}
