@@ -53,7 +53,7 @@ export const FAQDATA = [
   },
   {
     title: "How much does each course cost?",
-    desc: "At our platform, we offer courses that cater to your passions and aspirations: Our UI/UX Course costs (₦30,000) immerses you in the world of user interface and user experience design, enabling you to create captivating digital experiences. Our Graphics Design Course cost (₦20,000), where you'll learn explore the realm of graphic design with our to craft compelling visual narratives. Our Digital Art Course cost (₦20,000), where you get to unleash your creativity in the digital realm with our mastering tools",
+    desc: "At our platform, we offer courses that cater to your passions and aspirations: Our UI/UX Course costs (₦150,000) immerses you in the world of user interface and user experience design, enabling you to create captivating digital experiences. Our Graphics Design Course cost (₦100,000), where you'll learn explore the realm of graphic design with our to craft compelling visual narratives. Our Digital Art Course cost (₦100,000), where you get to unleash your creativity in the digital realm with our mastering tools",
   },
   {
     title: "How can I get started with learning?",
@@ -109,7 +109,7 @@ export const UIUXDESIGNDATA = [
       "Supportive community",
       "Certificate of completion",
     ],
-    coursePrice: "30,000",
+    coursePrice: "150,000",
     courseOverview:
       "This is course will put you through the basics of UI Design and how to design aesthetically pleasing user interfaces. You will learn the basic tools, layouts, mockups and technique product designers use to come up with amazing interface.",
     courseContent: [
@@ -192,7 +192,7 @@ export const GRAPHICSDESIGNDATA = [
       "Supportive community",
       "Certificate of completion",
     ],
-    coursePrice: "20,000",
+    coursePrice: "100,000",
     courseOverview:
       "Our graphics design course gives an opportunity for you to cultivate and polish your design abilities. Through the course, you will gain deep knowledge design principles and other key elements that are vital to the field of graphic design. ",
     courseContent: [
@@ -272,7 +272,7 @@ export const DIGITALARTSDATA = [
       "Supportive community",
       "Certificate of completion",
     ],
-    coursePrice: "20,000",
+    coursePrice: "100,000",
     courseOverview:
       "This course will teach you how to make digital art . You'll learn about the various tools and the many features it has to offer. We will provide a basic explanation of the steps involved in creating digital artwork along with simple and understandable examples to make it easy to follow through. We provide all of the insights you need to create unique and beautiful digital artworks",
     courseContent: [
