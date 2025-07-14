@@ -17,7 +17,6 @@ import {
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
-// import { Icon } from "@/components/Icons"; // Import Icon component
 
 // Nav Link Component for desktop
 export const CustomLink = ({
@@ -217,89 +216,89 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <div className=" relative ">
-      <header className="sticky top-0 z-50 bg-white px-12 dark:bg-black dark:shadow-sm dark:shadow-white/50 shadow-[0px_6px_15px_0px_rgba(0,0,0,0.15)] backdrop-blur-md">
-        <nav className="w-full flex flex-row items-center  justify-between xl:px-4 md:px-3 px-6 pb-4 pt-7">
-          <div className=" max-w-[110px] md:max-w-[117px]  ">
-            <Image
-              className=" dark:hidden h-auto w-60 "
-              src={logoMerp || "/placeholder.svg"}
-              alt="merp-designs"
-              priority
-              sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
-            />
-            <Image
-              className=" hidden dark:flex h-auto w-full "
-              src={logoMerp || "/placeholder.svg"}
-              alt="merp-designs"
-              priority
-              sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
-            />
-          </div>
+    <header className="sticky top-0 z-50 bg-white px-12 dark:bg-black dark:shadow-sm dark:shadow-white/50 shadow-[0px_6px_15px_0px_rgba(0,0,0,0.15)] backdrop-blur-md">
+      <nav className="w-full flex flex-row items-center  justify-between xl:px-4 md:px-3 px-6 pb-4 pt-7">
+        <div className=" max-w-[110px] md:max-w-[117px]  ">
+          <Image
+            className=" dark:hidden h-auto w-60 "
+            src={logoMerp || "/placeholder.svg"}
+            alt="merp-designs"
+            priority
+            sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
+          />
+          <Image
+            className=" hidden dark:flex h-auto w-full "
+            src={logoMerp || "/placeholder.svg"}
+            alt="merp-designs"
+            priority
+            sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
+          />
+        </div>
 
-          <div className=" lg:hidden flex gap-20 items-center ">
-            <CustomLink
-              className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
-              href="/"
-              title=" Home "
-            />
-            <CustomLink
-              className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
-              href="/about"
-              title=" About "
-            />
-            {/* Shadcn Navigation Menu for Courses - 3x3 Grid */}
-            <NavigationMenu className="[&>div]:left-1/2 [&>div]:-translate-x-1/2">
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger
-                    className={cn(
-                      "hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold font-medium dark:text-white bg-transparent",
-                      router.asPath === "/courses" ||
-                        router.asPath.startsWith("/courses/")
-                        ? "text-lexPrimary dark:!text-lexAccent font-bold"
-                        : ""
-                    )}
-                  >
-                    Courses
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="grid grid-cols-3 text-right gap-4 p-6 w-[1000px] min-h-[300px] ">
-                      {courses.map((course) => (
-                        <CourseItem
-                          key={course.title}
-                          title={course.title}
-                          href={course.href}
-                        />
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+        <div className=" lg:hidden flex gap-20 items-center ">
+          <CustomLink
+            className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
+            href="/"
+            title=" Home "
+          />
+          <CustomLink
+            className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
+            href="/about"
+            title=" About "
+          />
+          {/* Shadcn Navigation Menu for Courses - 3x3 Grid */}
+          <NavigationMenu className="[&>div]:left-1/2 [&>div]:-translate-x-1/2">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold font-medium dark:text-white bg-transparent",
+                    router.asPath === "/courses" ||
+                      router.asPath.startsWith("/courses/")
+                      ? "text-lexPrimary dark:!text-lexAccent font-bold"
+                      : ""
+                  )}
+                >
+                  Courses
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid grid-cols-3 text-right gap-4 p-6 w-[1000px] min-h-[300px] ">
+                    {courses.map((course) => (
+                      <CourseItem
+                        key={course.title}
+                        title={course.title}
+                        href={course.href}
+                      />
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
 
-            <CustomLink
-              className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
-              href="/contact"
-              title=" Contact Us"
-            />
-          </div>
+          <CustomLink
+            className="hover:text-lexPrimary dark:hover:text-lexAccent hover:!font-bold "
+            href="/contact"
+            title=" Contact Us"
+          />
+        </div>
 
-          {/* Replace custom theme switcher with shadcn ModeToggle */}
-          <div className="lg:hidden">
-            <ModeToggle />
-          </div>
+        {/* Replace custom theme switcher with shadcn ModeToggle */}
+        <div className="lg:hidden">
+          <ModeToggle />
+        </div>
 
-          <button
-            className={`lg:flex hidden dark:text-white flex-col justify-center items-center ${
-              isOpen ? "rotate-90" : ""
-            } transition-all duration-300`}
-            onClick={handleClick}
-          >
-            {isOpen ? <HamburgerClose /> : <HamburgerOpen />}
-          </button>
-        </nav>
-      </header>
+        <button
+          className={`lg:flex hidden dark:text-white flex-col justify-center items-center ${
+            isOpen ? "rotate-90" : ""
+          } transition-all duration-300`}
+          onClick={handleClick}
+        >
+          {isOpen ? <HamburgerClose /> : <HamburgerOpen />}
+        </button>
+      </nav>
+      
+      {/* Mobile Menu */}
       {isOpen ? (
         <motion.div
           ref={menuRef}
@@ -368,7 +367,7 @@ const Navbar = () => {
           </div>
         </motion.div>
       ) : null}
-    </div>
+    </header>
   );
 };
 
