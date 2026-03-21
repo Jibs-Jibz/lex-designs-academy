@@ -15,6 +15,8 @@ module.exports = {
 				poppins: ["var(--font-poppins)", ...fontFamily.sans],
 				inter: ["var(--font-inter)", ...fontFamily.sans],
 				manrope: ["var(--font-manrope)", ...fontFamily.sans],
+				archivo: ["Archivo", ...fontFamily.sans],
+				geist: ["Geist", ...fontFamily.sans],
 			},
 			backgroundImage: {
 				courseBgGraphics: 'url("../../public/images/course-header-graphics.png")',
