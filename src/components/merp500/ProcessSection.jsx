@@ -1,65 +1,59 @@
 import Link from "next/link";
 import { PROCESS_STEPS } from "./data";
 
-// Figma node 2018:78 — bg:#f6f4f7
-// "OUR PROCESS" 14px w=500 #0d0d0d
-// "How mERP 500 Works." 48px w=700 #010101
-// Footer note: 16px w=700 #000000
-// "secure your slot" 16px w=700 #671355
-// Step frames: h≈208–211 (number ~large, title ~16-18px, desc ~14px)
-
 const ProcessSection = () => {
   return (
-    <section className="bg-[#f6f4f7] px-16 xl:px-8 md:px-5 py-20">
-      <div className="max-w-[1178px] mx-auto flex flex-col gap-12">
-
-        {/* Heading frame w=1178 h=82 */}
-        <div>
-          {/* 14px medium */}
-          <p className="font-poppins text-[14px] font-medium text-[#0d0d0d] tracking-widest uppercase mb-3">
+    <section className="bg-white md:bg-[#F7F4F7] px-16 xl:px-8 md:px-[16px] py-24 md:py-[40px]">
+      <div className="max-w-[1178px] mx-auto flex flex-col items-center justify-center gap-[48px] md:gap-[32px]">
+        
+        {/* Heading frame */}
+        <div className="flex flex-col w-full md:gap-[5px]">
+          <p className="font-archivo text-[14px] font-medium text-[#0E0D0D]/70 tracking-[0.01em] capitalize leading-[26px]">
             OUR PROCESS
           </p>
-          {/* 48px bold */}
-          <h2 className="font-poppins text-[48px] xl:text-[38px] lg:text-[32px] md:text-[28px] font-bold text-[#010101] leading-tight">
-            How mERP 500 Works.
+          <h2 className="font-archivo text-[48px] md:text-[32px] font-semibold text-[#010101] leading-[56px] md:leading-[28px] tracking-[-0.03em] capitalize">
+            How mERP <span className="text-lexAccent">500</span> Works.
           </h2>
         </div>
 
-        {/* Steps — divided columns matching Figma Frame 24 */}
-        <div className="border-t border-[#0d0d0d]/10">
-          <div className="grid grid-cols-4 lg:grid-cols-2 md:grid-cols-1 divide-x lg:divide-x-0 divide-[#0d0d0d]/10">
-            {PROCESS_STEPS.map((step) => (
+        {/* Steps */}
+        <div className="w-full">
+          <div className="grid grid-cols-4 md:grid-cols-1 md:gap-[32px] divide-x md:divide-x-0 md:divide-y divide-[#671355]/40">
+            {PROCESS_STEPS.map((step, index) => (
               <div
                 key={step.num}
-                className="flex flex-col gap-4 pt-8 pb-6 px-8 xl:px-5 md:px-0 md:py-6 lg:border-b border-[#0d0d0d]/10"
+                className={`flex flex-col gap-[32px] px-[24px] xl:px-4 md:px-0 md:py-[24px] ${
+                  index === 0 ? "pl-0 md:pl-0 md:pt-0" : ""
+                } ${index === 3 ? "pr-0 md:pr-0 md:pb-0" : ""}`}
               >
-                {/* Large step number — matching Figma proportions */}
-                <span className="font-poppins text-[40px] font-bold text-lexPrimary leading-none">
+                {/* Large step number */}
+                <span className="font-archivo text-[80px] font-bold text-[#1F1B1E] opacity-[0.08] leading-[79px] md:leading-[59px] tracking-[-0.03em] capitalize">
                   {step.num}
                 </span>
-                {/* Step title */}
-                <h3 className="font-poppins text-[16px] font-bold text-[#010101] leading-snug capitalize">
-                  {step.title}
-                </h3>
-                {/* Step description */}
-                <p className="font-inter text-[14px] font-normal text-[#010101]/60 leading-relaxed">
-                  {step.desc}
-                </p>
+
+                <div className="flex flex-col gap-[8px]">
+                  {/* Step title */}
+                  <h3 className="font-inter text-[16px] font-bold text-[#290822] leading-[16px] tracking-[-0.04em] uppercase">
+                    {step.title}
+                  </h3>
+                  {/* Step description */}
+                  <p className="font-geist text-[16px] font-normal text-black/60 leading-[24px] tracking-[0.01em]">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Footer row w=1178 — Frame 25 */}
-        <div className="border-t border-[#0d0d0d]/10 pt-6 flex items-center justify-between md:flex-col md:gap-3 md:items-start">
-          {/* 16px bold */}
-          <p className="font-poppins text-[16px] font-bold text-black">
+        {/* Footer row */}
+        <div className="w-full flex items-center justify-between md:flex-col md:items-start md:gap-[24px] mt-0 md:mt-2">
+          <p className="font-archivo text-[16px] font-bold md:font-medium text-black/60 leading-[24px] tracking-[0.01em] uppercase">
             New cohorts is open every month from April to November.
           </p>
-          {/* 16px bold #671355 */}
           <Link
             href="/courses"
-            className="font-poppins text-[16px] font-bold text-lexPrimary hover:underline"
+            className="font-archivo text-[16px] font-bold text-[#671355] leading-[17px] uppercase underline hover:text-opacity-80 transition-opacity"
           >
             secure your slot
           </Link>

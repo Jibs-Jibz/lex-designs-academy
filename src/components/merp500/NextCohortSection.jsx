@@ -1,61 +1,77 @@
 import Link from "next/link";
 
-// Figma node 2029:148 — bg:#510f43
-// "Next Cohort starts April 2026" 96px w=700 #ffffff  w=756 h=212
-// "Limited to 40 students per course" 18px w=400 #ffffff
-// "Spots fill monthly…" 14px w=700 #ffffff
-// "Cohorts run from April to November 2026" 14px w=700 #ffffff
-// Button bg:#fbd11b, "Secure your slot now" 17px w=700 #ffffff  w=261 h=58
-
 const NextCohortSection = () => {
   return (
-    <section className="relative bg-[#510f43] overflow-hidden px-16 xl:px-8 md:px-5 py-24 md:py-16">
-      {/* Figma: repeating "April 2026" decorative text layers */}
-      <div
-        aria-hidden
-        className="absolute inset-0 flex items-center justify-center overflow-hidden select-none pointer-events-none opacity-5"
-      >
-        <span
-          className="font-poppins font-bold text-white whitespace-nowrap"
-          style={{ fontSize: "clamp(100px, 18vw, 176px)" }}
-        >
-          April 2026
-        </span>
-      </div>
+    <section className="relative flex flex-col items-center justify-center w-full min-h-[656px] md:min-h-[496px] py-[150px] px-[105px] md:py-[40px] md:px-[16px] gap-[48px] overflow-hidden bg-[#520F43]">
+      {/* Background Gradient overlay */}
+      <div className="absolute inset-0 bg-[#121212]/40 z-0 pointer-events-none" />
 
-      <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col gap-10">
-        {/* 96px bold — frame w=676 */}
-        <h2
-          className="font-poppins font-bold text-white leading-tight"
-          style={{ fontSize: "clamp(42px, 8vw, 96px)" }}
-        >
-          Next Cohort starts April 2026
-        </h2>
-
-        {/* Frame 47 + fine print */}
-        <div className="flex flex-col gap-2">
-          {/* 18px regular */}
-          <p className="font-inter text-[18px] font-normal text-white">
-            Limited to 40 students per course
-          </p>
-          {/* 14px bold */}
-          <p className="font-poppins text-[14px] font-bold text-white">
-            Spots fill monthly. Once they&apos;re gone, you wait for the next month.
-          </p>
-          {/* 14px bold */}
-          <p className="font-poppins text-[14px] font-bold text-white">
-            Cohorts run from April to November 2026
-          </p>
+      {/* Decorative Background Text (Figma Absolute positions) */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden z-0 pointer-events-none select-none">
+        {/* TOP */}
+        <div className="absolute top-[-70px] md:top-[-20px] left-1/2 -translate-x-1/2 flex gap-[40px] whitespace-nowrap  z-10">
+          {[...Array(8)].map((_, i) => (
+            <span key={`top-${i}`} className="font-archivo font-bold text-[176px] md:text-[62px] text-white opacity-[0.04] tracking-[-0.06em]">
+              April 2026
+            </span>
+          ))}
         </div>
 
-        {/* CTA button — Frame 33 w=261 h=58 bg:#fbd11b */}
-        <Link
-          href="/courses"
-          className="inline-flex items-center justify-center w-[261px] h-[58px] font-poppins text-[17px] font-bold text-white rounded-full transition-colors"
-          style={{ background: "#fbd11b" }}
-        >
-          Secure your slot now
-        </Link>
+        {/* BOTTOM */}
+        <div className="absolute bottom-[-70px] md:bottom-[-20px] left-1/2 -translate-x-1/2 flex gap-[40px] whitespace-nowrap  z-10">
+          {[...Array(8)].map((_, i) => (
+            <span key={`bottom-${i}`} className="font-archivo font-bold text-[176px] md:text-[62px] text-white opacity-[0.04] tracking-[-0.06em]">
+              April 2026
+            </span>
+          ))}
+        </div>
+
+        {/* LEFT */}
+        <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-90 flex gap-[40px] whitespace-nowrap">
+          {[...Array(8)].map((_, i) => (
+            <span key={`left-${i}`} className="font-archivo font-bold text-[117px] md:text-[62px] text-white opacity-[0.04] tracking-[-0.06em]">
+              April 2026
+            </span>
+          ))}
+        </div>
+
+        {/* RIGHT */}
+        <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 rotate-90 flex gap-[40px] whitespace-nowrap">
+          {[...Array(8)].map((_, i) => (
+            <span key={`right-${i}`} className="font-archivo font-bold text-[117px] md:text-[62px] text-white opacity-[0.04] tracking-[-0.06em]">
+              April 2026
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative z-10 flex flex-col items-center w-full gap-[48px]">
+        {/* Main Heading */}
+        <h2 className="font-inter font-bold text-[96px] md:text-[43px] text-white/[0.31] leading-[1.1] tracking-[-0.08em] text-center max-w-[756px] md:max-w-[361px]">
+          Next Cohort starts <span className="text-[#FBD11B] block">April 2026</span>
+        </h2>
+
+        {/* Action area */}
+        <div className="flex flex-col md:flex-col-reverse items-center justify-center gap-[48px] md:gap-[8px] w-full">
+          
+          {/* Limited text block */}
+          <div className="flex items-center justify-center p-[12px_24px] md:p-0 md:border-none border border-white/40 rounded-[5px] md:mt-[4px]">
+            <p className="font-geist font-bold md:font-normal text-[18px] md:text-[10px] text-white/40 md:text-white/95 tracking-[0.01em] uppercase text-center">
+              Limited to <span className="text-[#FBD11B]">40 students</span> per course
+            </p>
+          </div>
+
+          {/* Button */}
+          <Link
+            href="/courses"
+            className="flex items-center justify-center w-[261px] md:w-[236px] h-[58px] bg-[#FBD11B] border border-[#671355] rounded-[32px] hover:opacity-90 transition-opacity"
+          >
+            <span className="font-archivo font-bold text-[17px] md:text-[15px] text-white md:text-[#38112F] uppercase tracking-[-0.02em]">
+              Secure your slot now
+            </span>
+          </Link>
+          
+        </div>
       </div>
     </section>
   );
