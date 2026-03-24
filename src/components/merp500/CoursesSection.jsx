@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -33,7 +34,8 @@ const NEW_COURSES = [
       "Mastery Of Figma",
       "Understanding UX Design",
       "How To Be Job Ready For Portfolio"
-    ]
+    ],
+    href: "/courses/ui-ux-design"
   },
   {
     title: "Front-End Web Development",
@@ -51,11 +53,12 @@ const NEW_COURSES = [
       "Mastery Of Developing Your First Website",
       "Understanding How Coding Works",
       "How To Be Job Ready For Portfolio"
-    ]
+    ],
+    href: "/courses/frontend-web-development"
   }
 ];
 
-const CourseCard = ({ title, target, duration, price, willLearn, graduateWith }) => (
+const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, href }) => (
   <motion.div variants={cardVariants} className="bg-gradient-to-b from-[#FFFFFF] to-[#F7E3F3] dark:from-[#1a1a1a] dark:to-[#1a1a1a] border border-black/10 dark:border-white/10 rounded-[16px] p-[24px_16px] mx-auto w-full max-w-[408px] flex flex-col gap-[36px] h-full shadow-sm">
     {/* Top title */}
     <div className="flex flex-col gap-3 w-full">
@@ -132,11 +135,14 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith })
         </div>
       </div>
 
-      <button className="mt-auto w-full flex items-center justify-center p-[16px_20px] bg-[#0D0D0D] hover:bg-[#1A1A1A] transition-colors rounded-[15px]">
+      <Link 
+        href={href}
+        className="mt-auto w-full flex items-center justify-center p-[16px_20px] bg-[#0D0D0D] hover:bg-[#1A1A1A] transition-colors rounded-[15px]"
+      >
         <span className="font-archivo font-bold text-[16px] text-white uppercase leading-[17px]">
           REGISTER NOW
         </span>
-      </button>
+      </Link>
     </div>
   </motion.div>
 );

@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <AnimatePresence mode="wait">
         <div className="bg-white dark:bg-black">
           <main
