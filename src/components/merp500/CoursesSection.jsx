@@ -56,7 +56,7 @@ const NEW_COURSES = [
 ];
 
 const CourseCard = ({ title, target, duration, price, willLearn, graduateWith }) => (
-  <motion.div variants={cardVariants} className="bg-gradient-to-b from-[#FFFFFF] to-[#F7E3F3] border border-black/10 rounded-[16px] p-[24px_16px] mx-auto w-full max-w-[408px] flex flex-col gap-[36px] h-full shadow-sm">
+  <motion.div variants={cardVariants} className="bg-gradient-to-b from-[#FFFFFF] to-[#F7E3F3] dark:from-[#1a1a1a] dark:to-[#1a1a1a] border border-black/10 dark:border-white/10 rounded-[16px] p-[24px_16px] mx-auto w-full max-w-[408px] flex flex-col gap-[36px] h-full shadow-sm">
     {/* Top title */}
     <div className="flex flex-col gap-3 w-full">
       {/* One-Time Payment Chip */}
@@ -71,15 +71,15 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith })
       
       {/* Title only */}
       <div className="flex flex-col gap-[6px] w-full">
-        <h3 className="font-geist font-semibold text-[24px] text-[#010101] tracking-[-0.05em] capitalize leading-none">
+        <h3 className="font-geist font-semibold text-[24px] text-[#010101] dark:text-white tracking-[-0.05em] capitalize leading-none">
           {title}
         </h3>
         {/* Level / Duration row */}
         <div className="flex items-center justify-between w-full pt-[4px]">
-          <span className="font-geist font-normal text-[14px] text-[#090808]/50 tracking-[-0.03em] capitalize">
+          <span className="font-geist font-normal text-[14px] text-[#090808]/50 dark:text-white/50 tracking-[-0.03em] capitalize">
             {target}
           </span>
-          <span className="font-geist font-normal text-[14px] text-[#010101]/55 tracking-[0.01em] capitalize">
+          <span className="font-geist font-normal text-[14px] text-[#010101]/55 dark:text-white/50 tracking-[0.01em] capitalize">
             {duration}
           </span>
         </div>
@@ -104,7 +104,7 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith })
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 mt-0.5">
                   <path d="M13.3333 4L5.99992 11.3333L2.66658 8" stroke="#FBD11B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <span className="font-archivo font-medium text-[14px] text-[#010101] tracking-[0.01em] leading-tight">
+                <span className="font-archivo font-medium text-[14px] text-[#010101] dark:text-white tracking-[0.01em] leading-tight">
                   {item}
                 </span>
               </li>
@@ -123,7 +123,7 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith })
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0 mt-0.5">
                   <path d="M13.3333 4L5.99992 11.3333L2.66658 8" stroke="#FBD11B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                <span className="font-archivo font-medium text-[14px] text-[#010101] tracking-[0.01em] leading-tight">
+                <span className="font-archivo font-medium text-[14px] text-[#010101] dark:text-white tracking-[0.01em] leading-tight">
                   {item}
                 </span>
               </li>
@@ -143,7 +143,7 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith })
 
 const CoursesSection = () => {
   return (
-    <section className="bg-[#FCF7FB] py-[72px] px-[105px] xl:px-12 md:py-[40px] md:px-[16px]">
+    <section className="bg-[#FCF7FB] dark:bg-[#0A0A0A] py-[72px] px-[105px] xl:px-12 md:py-[40px] md:px-[16px]">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-[40px]">
         
         {/* Heading frame */}
@@ -154,10 +154,10 @@ const CoursesSection = () => {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-col items-center gap-[14px] w-full max-w-[550px]"
         >
-          <p className="font-archivo text-[14px] font-bold text-[#0E0D0D]/70 tracking-[0.01em] uppercase text-center leading-[26px]">
+          <p className="font-archivo text-[14px] font-bold text-[#0E0D0D]/70 dark:text-white/50 tracking-[0.01em] uppercase text-center leading-[26px]">
             COURSES
           </p>
-          <h2 className="font-archivo text-[36px] font-semibold text-[#010101] leading-[50px] md:leading-[40px] tracking-[-0.03em] capitalize text-center">
+          <h2 className="font-archivo text-[36px] font-semibold text-[#010101] dark:text-white leading-[50px] md:leading-[40px] tracking-[-0.03em] capitalize text-center">
             Two Industry Focused<br className="md:hidden" /> 4-Week Intensives
           </h2>
         </motion.div>
