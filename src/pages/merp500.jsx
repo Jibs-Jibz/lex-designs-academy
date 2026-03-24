@@ -38,14 +38,11 @@ export default function Merp500() {
 
       <main className="flex flex-col w-full overflow-x-hidden">
         <HeroSection />
-        <VisionSection />
         <ProcessSection />
-        <MissionTargetSection />
         <BuiltForSection />
         <CoursesSection />
         <FaqSection />
         <NextCohortSection />
-        <CtaSection />
       </main>
 
     </>

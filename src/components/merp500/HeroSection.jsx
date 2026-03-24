@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { TextRoll } from "./TextRoll";
 
 // Figma: Frame 9 button container w=473 h=49
 // Title: 64px w=600 #ffffff
@@ -13,142 +15,133 @@ const courses = [
   { label: "Content Creation", active: false },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 20 },
+  },
+};
+
 const HeroSection = () => {
   return (
-    <section className="relative bg-[#0e0e0e] min-h-[797px] flex items-center overflow-hidden px-16 xl:px-8 md:px-5 py-20 md:py-14">
-      {/* Figma: Ellipse 1 #671355 + Ellipse 2 #d5c320 blurred glows */}
-      <div
+    <section className="relative bg-[#0F0E0F] min-h-[797px] flex items-center overflow-hidden xl:px-8 py-[120px] px-[102px] pb-[80px] md:px-[16px] md:pb-[60px] md:pt-[120px]">
+      
+      {/* bBG gradient color */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.15 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
         aria-hidden
-        className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[890px] h-[890px] rounded-full opacity-25 blur-[160px] pointer-events-none"
-        style={{ background: "#671355" }}
-      />
-      <div
-        aria-hidden
-        className="absolute right-[10%] top-0 w-[890px] h-[890px] rounded-full opacity-10 blur-[160px] pointer-events-none"
-        style={{ background: "#d5c320" }}
+        className="absolute w-[1764px] h-[841px] top-[-840px] left-[calc(50%-882px)] pointer-events-none z-[3]"
+        style={{ background: "#671355", filter: "blur(300px)" }}
       />
 
-      <div className="relative z-10 max-w-[1200px] mx-auto w-full flex items-center justify-between gap-12 lg:flex-col">
+      {/* Ellipse 1 */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 0.2, scale: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
+        aria-hidden
+        className="absolute left-[20%] top-1/2 -translate-y-1/2 w-[890px] h-[890px] rounded-full pointer-events-none"
+        style={{ background: "#671355", filter: "blur(250px)" }}
+      />
 
-        {/* Left — Hero container w=541 */}
-        <div className="flex flex-col gap-8 w-[541px] xl:w-[480px] lg:w-full">
-          {/* Hero text frame w=541 h=287 */}
-          <div className="flex flex-col gap-5">
-            {/* Figma: 64px semibold #ffffff */}
-            <h1 className="font-poppins text-[64px] xl:text-5xl lg:text-4xl md:text-[34px] font-semibold text-white leading-[1.1]">
-              training 500 future tech professionals in 8 months
-            </h1>
-            {/* Figma: 16px regular #ffffff */}
-            <p className="font-inter text-[16px] font-normal text-white/80 max-w-[455px] leading-relaxed">
+      <div className="relative z-10 max-w-[1440px] mx-auto w-full flex items-center justify-center  gap-[101px] lg:flex-col lg:gap-[40px]">
+
+        {/* Left — Hero container */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex flex-col gap-8 md:gap-10 w-[541px] xl:w-[480px] lg:w-full md:w-full md:max-w-full shrink-0 relative z-20"
+        >
+          
+          {/* Hero text frame */}
+          <div className="flex flex-col gap-[16px]">
+            <motion.div variants={itemVariants} className="relative inline-block w-full mt-4 md:mt-0">
+              {/* Figma: "You" icon placed above 500 Future text */}
+              <motion.div 
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.8, type: "spring", stiffness: 200, damping: 12 }}
+                className="absolute left-[280px] top-[45px] md:left-auto md:right-[53px] md:top-[190px] md:-rotate-[7.5deg] pointer-events-none z-10 w-[72px] h-[58px]"
+              >
+                <Image
+                  src="/icons/you-icon.png"
+                  alt="You pointer icon"
+                  fill
+                  className="object-contain"
+                />
+              </motion.div>
+              <h1 className="font-archivo text-[64px] xl:text-[54px] md:text-[48px] font-semibold text-white leading-[1.2] tracking-[-0.04em] capitalize relative z-0">
+                <TextRoll className="w-full">
+                  Training 500 Future Tech Professionals In 8 Months
+                </TextRoll>
+              </h1>
+            </motion.div>
+            
+            <motion.p variants={itemVariants} className="font-geist text-[16px] font-normal text-white/40 max-w-[455px] md:w-full md:max-w-full leading-[24px] tracking-[0.01em]">
               MERP Academy is on a mission to train, equip, and launch 500
               students into high-demand tech careers through practical,
               industry-focused intensives.
-            </p>
+            </motion.p>
           </div>
 
-          {/* Button + text frame w=473 h=81 */}
-          <div className="flex flex-col gap-4">
-            {/* Frame 9 buttons h=49 */}
-            <div className="flex gap-4 flex-wrap items-center">
+          {/* Button + text frame */}
+          <motion.div variants={itemVariants} className="flex flex-col gap-4 md:gap-[32px] w-[473px] md:w-full md:max-w-full">
+            <div className="flex gap-[23px] flex-row items-center w-full">
               <Link
                 href="/courses"
-                className="h-[49px] px-8 bg-lexAccent hover:bg-lexAccent/90 text-black font-bold font-poppins text-sm tracking-wide rounded-full transition-colors flex items-center justify-center"
+                className="flex-1 h-[48px] shrink-0 bg-[#FBD11B] hover:bg-[#DCC921] text-[#201D1D] font-archivo font-medium text-[16px] md:text-[14px] leading-[15px] uppercase rounded-[32px] transition-colors flex items-center justify-center px-[20px] py-[16px] text-center"
               >
                 JOIN THE COHORT
               </Link>
               <Link
                 href="/courses"
-                className="h-[49px] px-8 border border-white/40 text-white hover:bg-white/10 font-semibold font-poppins text-sm tracking-wide rounded-full transition-colors flex items-center justify-center"
+                className="flex-1 h-[48px] shrink-0 border border-[rgba(226,226,226,0.35)] text-[rgba(237,237,237,0.53)] hover:bg-white/5 font-archivo font-medium text-[16px] md:text-[14px] leading-[15px] uppercase rounded-[32px] transition-colors flex items-center justify-center px-[20px] py-[16px] text-center"
               >
                 BROWSE COURSES
               </Link>
             </div>
-            {/* Figma: 16px regular #ffffff */}
-            <p className="font-inter text-[16px] font-normal text-white/50">
+            <p className="font-geist text-[16px] font-normal text-white/40 leading-none w-full md:mt-2">
               Limited to 40 students per course per month
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Right — Image frame w=541 h=597 */}
-        <div className="relative shrink-0 w-[541px] h-[540px] xl:w-[440px] xl:h-[440px] lg:w-full lg:h-[380px] md:h-[300px]">
+        {/* Right — Image frame */}
+        <motion.div 
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="relative shrink-0 w-full max-w-[641px] aspect-[541/597] xl:max-w-[440px] lg:max-w-full lg:aspect-video md:aspect-square md:hidden"
+        >
           <Image
             src="/images/merp500-header.png"
             alt="MERP 500 student"
             fill
-            className="object-contain object-bottom"
+            className="object-contain object-center"
             priority
-          />
-
-          {/* Floating: Ai icon (top-left) */}
-          <div className="absolute top-6 left-0 bg-[#1a1a2e] border border-white/10 rounded-2xl p-3 shadow-xl">
-            <div
-              className="w-11 h-11 rounded-xl flex items-center justify-center font-black text-base"
-              style={{ background: "#FF7C00", color: "#1a1a2e" }}
-            >
-              Ai
-            </div>
-          </div>
-
-          {/* Floating: code icon (top-right) */}
-          <div className="absolute top-8 right-0 bg-[#1a1a2e] border border-white/10 rounded-2xl p-3.5 shadow-xl">
-            <span className="text-lexAccent font-black text-lg font-mono">&lt;/&gt;</span>
-          </div>
-
-          {/* Figma: "You" bubble — Main icon bg=#9886fe */}
-          <div className="absolute top-[22%] left-[30%] bg-[#9886FE] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
-            You
-          </div>
-
-          {/* Floating: Courses checklist card */}
-          <div className="absolute bottom-20 left-0 bg-[#1c1c1c]/95 backdrop-blur-sm border border-white/10 rounded-2xl px-4 py-3.5 shadow-xl flex flex-col gap-2.5 min-w-[195px]">
-            {courses.map((c) => (
-              <div key={c.label} className="flex items-center gap-2.5">
-                <span
-                  className={`w-4 h-4 rounded-full border flex items-center justify-center text-[9px] shrink-0 ${
-                    c.active
-                      ? "border-lexAccent bg-lexAccent/10 text-lexAccent"
-                      : "border-white/30 text-white/40"
-                  }`}
-                >
-                  {c.active ? "●" : "✓"}
-                </span>
-                <span
-                  className={`text-[13px] font-semibold font-poppins ${
-                    c.active
-                      ? "bg-lexAccent text-black px-2 py-0.5 rounded-md"
-                      : "text-white/70"
-                  }`}
-                >
-                  {c.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Floating: Training 500 Students card (bottom-right) */}
-          <div className="absolute bottom-20 right-0 bg-[#1c1c1c]/95 backdrop-blur-sm border border-white/10 rounded-2xl px-4 py-3.5 shadow-xl min-w-[185px]">
-            <p className="text-white font-bold font-poppins text-[14px] leading-snug mb-2">
-              Training 500 Students
-            </p>
-            <p className="text-white/50 text-[12px] font-inter mb-3 flex items-center gap-1.5">
-              <span className="text-lexAccent text-[10px]">▶</span> Online Courses
-            </p>
-            <div className="flex gap-1.5 flex-wrap">
-              <span className="bg-lexAccent text-black text-[11px] font-bold font-poppins px-2.5 py-1 rounded-full">
-                ✓ Beginner
-              </span>
-              <span className="bg-lexAccent text-black text-[11px] font-bold font-poppins px-2.5 py-1 rounded-full">
-                ✓ Advanced
-              </span>
-            </div>
-          </div>
-
-          {/* Figma: "Sarah" bubble — Main icon bg=#2d1c2d */}
-          <div className="absolute bottom-6 right-1/3 bg-[#2D1C2D] text-white text-[13px] font-semibold font-poppins px-3 py-1.5 rounded-full shadow-md">
-            Sarah
-          </div>
-        </div>
+          />   
+        </motion.div>
       </div>
     </section>
   );

@@ -1,64 +1,102 @@
 import { useState } from "react";
 import { FAQ_DATA } from "./data";
+import { motion, AnimatePresence } from "framer-motion";
 
-// Figma node 2029:177 — bg:#fcf7fb
-// "FAQs" 14px w=500 #0d0d0d
-// "Common questions we answered for you" 36px w=600 #010101
-// Card instances: num + title + desc (from component)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+  },
+};
 
-const FaqItem = ({ q, a, index }) => {
-  const [open, setOpen] = useState(false);
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: { type: "tween", duration: 0.4 },
+  },
+};
 
+const FaqItem = ({ q, a, isOpen, onToggle }) => {
   return (
-    <div className="border-b border-[#D1D1D1]">
+    <motion.div variants={itemVariants} className="bg-white dark:bg-[#1a1a1a] flex flex-col p-[19px] gap-[16px] w-full transition-all duration-300">
       <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-5 px-2 text-left gap-4"
+        onClick={onToggle}
+        className="w-full flex items-center justify-between gap-[24px] text-left focus:outline-none"
       >
-        <span className="flex items-center gap-3">
-          <span className="font-poppins text-[14px] font-bold text-lexPrimary w-7 shrink-0">
-            {String(index + 1).padStart(2, "0")}
-          </span>
-          <span className="font-poppins text-[16px] font-semibold text-[#010101] dark:text-white md:text-[14px]">
-            {q}
-          </span>
+        <span className="font-archivo text-[16px] font-semibold text-[#000000] dark:text-white tracking-[0.01em]">
+          {q}
         </span>
-        <span className="text-lexPrimary text-2xl shrink-0 font-light select-none">
-          {open ? "−" : "+"}
-        </span>
+        <div
+          className={`shrink-0 w-[24px] h-[24px] flex items-center justify-center transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+        >
+          <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L7 7L13 1" stroke="#09244B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </div>
       </button>
-      {open && (
-        <p className="pl-10 pr-2 pb-5 font-inter text-[14px] font-normal text-[#010101]/70 dark:text-white/70 leading-relaxed">
-          {a}
-        </p>
-      )}
-    </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="overflow-hidden"
+          >
+            <p className="font-archivo text-[16px] font-bold text-[#000000] dark:text-white opacity-40 leading-[1.25] tracking-[0.01em]">
+              {a}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 
 const FaqSection = () => {
-  return (
-    <section className="bg-[#fcf7fb] border-t border-[#010101]/10 px-16 xl:px-8 md:px-5 py-20">
-      <div className="max-w-[1200px] mx-auto flex gap-16 lg:flex-col">
+  const [openIndex, setOpenIndex] = useState(0);
 
-        {/* Left heading — frame w=492 */}
-        <div className="shrink-0 w-[492px] xl:w-[360px] lg:w-full">
-          {/* 14px medium */}
-          <p className="font-poppins text-[14px] font-medium text-[#0d0d0d] tracking-widest uppercase mb-4">
+  return (
+    <section className="bg-[#FCF7FB] dark:bg-[#0A0A0A] py-[100px] md:py-[60px] px-[131px] xl:px-12 md:px-5">
+      <div className="max-w-[1240px] mx-auto flex flex-row items-start justify-between gap-[57px] lg:flex-col lg:gap-[40px]">
+        {/* Left heading frame */}
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="shrink-0 w-[492px] lg:w-full flex flex-col gap-[8px]"
+        >
+          <p className="font-archivo text-[14px] font-medium text-[#0E0D0D]/70 dark:text-white/50 tracking-[0.01em] leading-[26px] uppercase">
             FAQs
           </p>
-          {/* 36px semibold */}
-          <h2 className="font-poppins text-[36px] xl:text-[28px] md:text-[24px] font-semibold text-[#010101] leading-tight max-w-[427px]">
+          <h2 className="font-archivo text-[36px] md:text-[28px] font-semibold text-[#010101] dark:text-white leading-[46px] md:leading-[1.2] tracking-[-0.03em] capitalize">
             Common questions we answered for you
           </h2>
-        </div>
+        </motion.div>
 
-        {/* Right — accordion frame w=686 */}
-        <div className="flex-1 flex flex-col">
+        {/* Right — accordion frame */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex-1 w-[686px] lg:w-[100%] max-w-[686px] lg:max-w-full flex flex-col gap-[8px] pt-[100px] lg:pt-0"
+        >
           {FAQ_DATA.map((item, i) => (
-            <FaqItem key={i} q={item.q} a={item.a} index={i} />
+            <FaqItem 
+              key={i} 
+              q={item.q} 
+              a={item.a} 
+              isOpen={openIndex === i}
+              onToggle={() => setOpenIndex(openIndex === i ? null : i)}
+            />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

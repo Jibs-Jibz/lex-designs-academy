@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 // Figma node 2029:215 — bg:#0f020c
 // "join the MERP 500 Mission" 60.5px w=700 #ffffff  w=537 h=152
@@ -10,17 +11,25 @@ const CtaSection = () => {
   return (
     <section className="relative bg-[#0f020c] overflow-hidden px-16 xl:px-8 md:px-5 py-24">
       {/* Background glow blobs matching Figma rectangles */}
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.3 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
         aria-hidden
-        className="absolute left-0 top-0 w-[612px] h-[567px] opacity-30 pointer-events-none"
+        className="absolute left-0 top-0 w-[612px] h-[567px] pointer-events-none"
         style={{
           background:
             "radial-gradient(circle at center, #91194b 0%, transparent 70%)",
         }}
       />
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 0.2 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
         aria-hidden
-        className="absolute right-0 bottom-0 w-[612px] h-[567px] opacity-20 pointer-events-none"
+        className="absolute right-0 bottom-0 w-[612px] h-[567px] pointer-events-none"
         style={{
           background:
             "radial-gradient(circle at center, #671355 0%, transparent 70%)",
@@ -29,10 +38,19 @@ const CtaSection = () => {
 
       {/* Content frame w=537 */}
       <div className="relative z-10 max-w-[1200px] mx-auto">
-        <div className="max-w-[537px] flex flex-col gap-8">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+          }}
+          className="max-w-[537px] flex flex-col gap-8"
+        >
 
           {/* Heading + subtext */}
-          <div className="flex flex-col gap-4">
+          <motion.div variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="flex flex-col gap-4">
             {/* 60.5px bold — rounded to 60px */}
             <h2 className="font-poppins text-[60px] xl:text-[48px] lg:text-[40px] md:text-[32px] font-bold text-white leading-tight">
               join the MERP 500 Mission
@@ -41,10 +59,10 @@ const CtaSection = () => {
             <p className="font-inter text-[14px] font-normal text-white/60">
               This is your opportunity to move from interest to capability.
             </p>
-          </div>
+          </motion.div>
 
           {/* Buttons — both h=66 */}
-          <div className="flex gap-4 flex-wrap">
+          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="flex gap-4 flex-wrap">
             {/* Frame 33 bg:#141414 w=250 h=66 */}
             <Link
               href="/courses"
@@ -61,8 +79,8 @@ const CtaSection = () => {
             >
               talk to an advisor
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
