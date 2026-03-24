@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const NextCohortSection = () => {
   return (
@@ -45,11 +46,29 @@ const NextCohortSection = () => {
         </div>
       </div>
 
-      <div className="relative z-10 flex flex-col items-center w-full gap-[48px]">
-        {/* Main Heading */}
-        <h2 className="font-inter font-bold text-[96px] md:text-[43px] text-white/[0.31] leading-[1.1] tracking-[-0.08em] text-center max-w-[756px] md:max-w-[361px]">
-          Next Cohort starts <span className="text-[#FBD11B] block">April 2026</span>
-        </h2>
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="relative z-10 flex flex-col items-center w-full gap-[48px]"
+      >
+        {/* Main Heading — slides in from top */}
+        <motion.h2
+          initial={{ opacity: 0, y: -40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="font-inter font-bold text-[96px] md:text-[43px] text-white/[0.31] leading-[1.1] tracking-[-0.08em] text-center max-w-[756px] md:max-w-[361px]"
+        >
+          Next Cohort starts{" "}
+          <span
+            className="text-[#FBD11B] block"
+            style={{ animation: "cohortGlow 2.5s ease-in-out infinite" }}
+          >
+            April 2026
+          </span>
+        </motion.h2>
 
         {/* Action area */}
         <div className="flex flex-col md:flex-col-reverse items-center justify-center gap-[48px] md:gap-[8px] w-full">
@@ -72,7 +91,7 @@ const NextCohortSection = () => {
           </Link>
           
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

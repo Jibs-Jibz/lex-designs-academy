@@ -1,3 +1,21 @@
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.1 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: {
+    opacity: 1, y: 0, scale: 1,
+    transition: { type: "spring", stiffness: 100, damping: 20 },
+  },
+};
+
 const NEW_COURSES = [
   {
     title: "Figma Masterclass To Pro",
@@ -38,7 +56,7 @@ const NEW_COURSES = [
 ];
 
 const CourseCard = ({ title, target, duration, price, willLearn, graduateWith }) => (
-  <div className="bg-gradient-to-b from-[#FFFFFF] to-[#F7E3F3] border border-black/10 rounded-[16px] p-[24px_16px] mx-auto w-full max-w-[408px] flex flex-col gap-[36px] h-full shadow-sm">
+  <motion.div variants={cardVariants} className="bg-gradient-to-b from-[#FFFFFF] to-[#F7E3F3] border border-black/10 rounded-[16px] p-[24px_16px] mx-auto w-full max-w-[408px] flex flex-col gap-[36px] h-full shadow-sm">
     {/* Top title */}
     <div className="flex flex-col gap-3 w-full">
       {/* One-Time Payment Chip */}
@@ -120,7 +138,7 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith })
         </span>
       </button>
     </div>
-  </div>
+  </motion.div>
 );
 
 const CoursesSection = () => {
@@ -129,21 +147,33 @@ const CoursesSection = () => {
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-[40px]">
         
         {/* Heading frame */}
-        <div className="flex flex-col items-center gap-[14px] w-full max-w-[550px]">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex flex-col items-center gap-[14px] w-full max-w-[550px]"
+        >
           <p className="font-archivo text-[14px] font-bold text-[#0E0D0D]/70 tracking-[0.01em] uppercase text-center leading-[26px]">
             COURSES
           </p>
           <h2 className="font-archivo text-[36px] font-semibold text-[#010101] leading-[50px] md:leading-[40px] tracking-[-0.03em] capitalize text-center">
             Two Industry Focused<br className="md:hidden" /> 4-Week Intensives
           </h2>
-        </div>
+        </motion.div>
 
         {/* Pricing frame */}
-        <div className="flex flex-row md:flex-col justify-center gap-[32px] w-full max-w-[848px]">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-row md:flex-col justify-center gap-[32px] w-full max-w-[848px]"
+        >
           {NEW_COURSES.map((course, idx) => (
             <CourseCard key={idx} {...course} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

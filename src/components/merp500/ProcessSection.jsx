@@ -1,5 +1,27 @@
 import Link from "next/link";
 import { PROCESS_STEPS } from "./data";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40, x: -20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    x: 0,
+    transition: { type: "spring", stiffness: 100, damping: 20 },
+  },
+};
 
 const ProcessSection = () => {
   return (
@@ -7,20 +29,33 @@ const ProcessSection = () => {
       <div className="max-w-[1178px] mx-auto flex flex-col items-center justify-center gap-[48px] md:gap-[32px]">
         
         {/* Heading frame */}
-        <div className="flex flex-col w-full md:gap-[5px]">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col w-full md:gap-[5px]"
+        >
           <p className="font-archivo text-[14px] font-medium text-[#0E0D0D]/70 tracking-[0.01em] capitalize leading-[26px]">
             OUR PROCESS
           </p>
           <h2 className="font-archivo text-[48px] md:text-[32px] font-semibold text-[#010101] leading-[56px] md:leading-[28px] tracking-[-0.03em] capitalize">
             How mERP <span className="text-lexAccent">500</span> Works.
           </h2>
-        </div>
+        </motion.div>
 
         {/* Steps */}
-        <div className="w-full">
-          <div className="grid grid-cols-4 md:grid-cols-1 md:gap-[32px] divide-x md:divide-x-0 md:divide-y divide-[#671355]/40">
+        <div className="w-full relative">
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-4 md:grid-cols-1 md:gap-[32px] divide-x md:divide-x-0 md:divide-y divide-[#671355]/40"
+          >
             {PROCESS_STEPS.map((step, index) => (
-              <div
+              <motion.div
+                variants={itemVariants}
                 key={step.num}
                 className={`flex flex-col gap-[32px] px-[24px] xl:px-4 md:px-0 md:py-[24px] ${
                   index === 0 ? "pl-0 md:pl-0 md:pt-0" : ""
@@ -41,13 +76,19 @@ const ProcessSection = () => {
                     {step.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Footer row */}
-        <div className="w-full flex items-center justify-between md:flex-col md:items-start md:gap-[24px] mt-0 md:mt-2">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+          className="w-full flex items-center justify-between md:flex-col md:items-start md:gap-[24px] mt-0 md:mt-2"
+        >
           <p className="font-archivo text-[16px] font-bold md:font-medium text-black/60 leading-[24px] tracking-[0.01em] uppercase">
             New cohorts is open every month from April to November.
           </p>
@@ -57,7 +98,7 @@ const ProcessSection = () => {
           >
             secure your slot
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
