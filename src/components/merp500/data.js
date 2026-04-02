@@ -60,7 +60,7 @@ export const COURSES_DATA = [
   {
     name: "UI/UX Design",
     duration: "4 weeks",
-    price: "₦150,000",
+    price: "₦55,000",
     highlights: [
       "Figma from scratch to professional",
       "User research & wireframing",
@@ -84,7 +84,7 @@ export const COURSES_DATA = [
   {
     name: "Frontend Web Development",
     duration: "4 weeks",
-    price: "₦150,000",
+    price: "₦75,000",
     highlights: [
       "HTML, CSS & JavaScript",
       "Responsive design with Tailwind",
@@ -130,7 +130,7 @@ export const FAQ_DATA = [
   },
   {
     q: "How much does it cost?",
-    a: "Pricing varies by course — UI/UX and Frontend are ₦150,000 each; Graphics and Digital Marketing are ₦100,000 each. Payment is required to confirm your slot.",
+    a: "Pricing varies by course — UI/UX is ₦55,000; Frontend is ₦75,000; Graphics and Digital Marketing are ₦100,000 each. Payment is required to confirm your slot.",
   },
   {
     q: "How do I secure my slot?",

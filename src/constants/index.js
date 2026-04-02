@@ -53,7 +53,7 @@ export const FAQDATA = [
   },
   {
     title: "How much does each course cost?",
-    desc: "At our platform, we offer courses that cater to your passions and aspirations: Our UI/UX Course costs (₦150,000) immerses you in the world of user interface and user experience design, enabling you to create captivating digital experiences. Our Graphics Design Course cost (₦100,000), where you'll learn explore the realm of graphic design with our to craft compelling visual narratives. Our Digital Art Course cost (₦100,000), where you get to unleash your creativity in the digital realm with our mastering tools",
+    desc: "At our platform, we offer courses that cater to your passions and aspirations: Our UI/UX Course costs (₦55,000) immerses you in the world of user interface and user experience design, enabling you to create captivating digital experiences. Our Graphics Design Course cost (₦100,000), where you'll learn explore the realm of graphic design with our to craft compelling visual narratives. Our Digital Art Course cost (₦100,000), where you get to unleash your creativity in the digital realm with our mastering tools",
   },
   {
     title: "How can I get started with learning?",
@@ -109,7 +109,7 @@ export const UIUXDESIGNDATA = [
       "Supportive community",
       "Certificate of completion",
     ],
-    coursePrice: "150,000",
+    coursePrice: "55,000",
     courseOverview:
       "This is course will put you through the basics of UI Design and how to design aesthetically pleasing user interfaces. You will learn the basic tools, layouts, mockups and technique product designers use to come up with amazing interface.",
     courseContent: [
@@ -857,7 +857,7 @@ export const FRONTENDDATA = [
       "Supportive community",
       "Certificate of completion",
     ],
-    coursePrice: "150,000",
+    coursePrice: "75,000",
     courseOverview:
       "You’ll learn to code websites from scratch, using front-end languages and libraries. This course builds both your logic and creativity for real-world development.",
     courseContent: [
