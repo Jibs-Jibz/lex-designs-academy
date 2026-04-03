@@ -202,7 +202,7 @@ export const ALL_COURSES = [
     title: "Frontend Web Development",
     description: "Learn from Beginner to Intermediate level",
     price: "75,000",
-    duration: "6 months",
+    duration: "4 weeks",
     units: "6 units",
     image: "/images/course-section1-frontend.jpeg",
     bgClass: "bg-courseBgFrontEnd",
