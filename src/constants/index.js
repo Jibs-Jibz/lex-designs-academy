@@ -841,7 +841,7 @@ export const FRONTENDDATA = [
     name: "Front-End Web Development",
     title: "Front-End Web Development",
     text: "Learn from Beginner to Intermediate level",
-    duration: "6 months",
+    duration: "4 weeks",
     unit: "6 units",
     link: "https://paystack.com/buy/front-end-web-development-ierzzl",
     whyCourse: [
