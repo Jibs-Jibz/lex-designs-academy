@@ -1,62 +1,48 @@
 "use client";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { motion } from "framer-motion";
 import { Icon } from "@iconify/react";
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 export function ModeToggle() {
-  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { setTheme, resolvedTheme } = useTheme();
+
+  // useEffect only runs on the client, so now we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="w-[38px] h-[38px] rounded-full bg-black/10 dark:bg-white/10 animate-pulse" />
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
 
   return (
-    // <DropdownMenu>
-    //   <DropdownMenuTrigger asChild>
-    //     <Button variant="outline" size="icon">
-    //       <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-    //       <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-    //       <span className="sr-only">Toggle theme</span>
-    //     </Button>
-    //   </DropdownMenuTrigger>
-    //   <DropdownMenuContent align="end">
-    //     <DropdownMenuItem onClick={() => setTheme("light")}>
-    //       Light
-    //     </DropdownMenuItem>
-    //     <DropdownMenuItem onClick={() => setTheme("dark")}>
-    //       Dark
-    //     </DropdownMenuItem>
-    //     <DropdownMenuItem onClick={() => setTheme("system")}>
-    //       System
-    //     </DropdownMenuItem>
-    //   </DropdownMenuContent>
-    // </DropdownMenu>
     <motion.div
-      whileHover={{
-        y: 2,
-      }}
+      whileHover={{ y: 2 }}
+      whileTap={{ scale: 0.95 }}
     >
-      <div
-        className={`  flex items-center justify-center rounded-full p-1 ${
-          theme === "light" ? "bg-black text-white" : " bg-white text-black"
-        }            `}
-        //   onClick={toggleTheme}
-      >
-        {theme === "dark" ? (
-          <button onClick={() => setTheme("light")} type="button">
-            <Icon
-              width="30"
-              className="w-[30px] h-[30px] fill-black"
-              icon="line-md:moon-filled-alt-loop"
-            />
-          </button>
-        ) : (
-          <button onClick={() => setTheme("dark")} type="button">
-            <Icon
-              width="30"
-              className="w-[30px] h-[30px] fill-black"
-              icon="line-md:sun-rising-loop"
-            />
-          </button>
+      <button
+        onClick={() => setTheme(isDark ? "light" : "dark")}
+        type="button"
+        className={cn(
+          "flex items-center justify-center rounded-full p-1.5 transition-all duration-300",
+          isDark ? "bg-white text-black" : "bg-black text-white"
         )}
-      </div>
+        aria-label="Toggle theme"
+      >
+        <Icon
+          width="24"
+          height="24"
+          className="transition-transform duration-500"
+          icon={isDark ? "line-md:moon-filled-to-sunny-filled-loop-transition" : "line-md:sunny-filled-loop-to-moon-filled-loop-transition"}
+        />
+      </button>
     </motion.div>
   );
 }

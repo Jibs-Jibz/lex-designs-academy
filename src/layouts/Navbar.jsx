@@ -285,8 +285,19 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Replace custom theme switcher with shadcn ModeToggle */}
-          <div className="lg:hidden">
+          {/* MERP 500 CTA + Mode Toggle */}
+          <div className="lg:hidden flex items-center gap-4">
+            <Link
+              href="/merp500"
+              className={cn(
+                "text-sm font-bold px-5 py-2.5 rounded-full transition-colors",
+                router.asPath === "/merp500"
+                  ? "bg-lexPrimary/10 text-lexPrimary dark:text-lexAccent border border-lexPrimary dark:border-lexAccent"
+                  : "bg-lexPrimary text-white hover:bg-lexPrimary/80"
+              )}
+            >
+              MERP 500
+            </Link>
             <ModeToggle />
           </div>
 
@@ -359,6 +370,13 @@ const Navbar = () => {
                 href="/contact"
                 title="Contact Us"
               />
+              <Link
+                href="/merp500"
+                onClick={handleClick}
+                className="bg-lexPrimary text-white font-bold text-sm px-6 py-3 rounded-full hover:bg-lexPrimary/80 transition-colors"
+              >
+                MERP 500
+              </Link>
             </nav>
 
             {/* Mode Toggle */}
