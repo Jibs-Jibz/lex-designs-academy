@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { usePaystackLinks } from "@/hooks/usePaystackLinks";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,7 +35,6 @@ const NEW_COURSES = [
       "Understanding UX Design",
       "How To Be Job Ready For Portfolio"
     ],
-    href: "https://paystack.com/buy/uiux-design-dlrkre"
   },
   {
     title: "Front-End Web Development",
@@ -54,7 +53,6 @@ const NEW_COURSES = [
       "Understanding How Coding Works",
       "How To Be Job Ready For Portfolio"
     ],
-    href: "https://paystack.com/buy/web-dev-obokyb"
   }
 ];
 
@@ -150,12 +148,15 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, h
 );
 
 const CoursesSection = () => {
+  const { uiux, webdev } = usePaystackLinks();
+  const hrefs = [uiux, webdev];
+
   return (
     <section id="courses" className="bg-[#FCF7FB] dark:bg-[#0A0A0A] py-[72px] px-[105px] xl:px-12 md:py-[40px] md:px-[16px]">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-[40px]">
-        
+
         {/* Heading frame */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -171,7 +172,7 @@ const CoursesSection = () => {
         </motion.div>
 
         {/* Pricing frame */}
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -179,7 +180,7 @@ const CoursesSection = () => {
           className="flex flex-row md:flex-col justify-center gap-[32px] w-full max-w-[848px]"
         >
           {NEW_COURSES.map((course, idx) => (
-            <CourseCard key={idx} {...course} />
+            <CourseCard key={idx} {...course} href={hrefs[idx]} />
           ))}
         </motion.div>
       </div>
