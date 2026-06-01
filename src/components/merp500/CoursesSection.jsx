@@ -22,7 +22,7 @@ const NEW_COURSES = [
     title: "Figma Masterclass To Pro",
     target: "Beginner/ Mid- Level",
     duration: "5 Weeks",
-    price: "₦55,000",
+    price: "₦50,000",
     willLearn: [
       "Live Sessions + Recordings",
       "Learn Figma",
@@ -35,13 +35,13 @@ const NEW_COURSES = [
       "Understanding UX Design",
       "How To Be Job Ready For Portfolio"
     ],
-    href: "/courses/ui-ux-design"
+    href: "https://paystack.com/buy/uiux-design-dlrkre"
   },
   {
     title: "Front-End Web Development",
     target: "Beginner/ Mid- Level",
     duration: "4 Weeks",
-    price: "₦75,000",
+    price: "₦60,000",
     willLearn: [
       "Live Sessions + Recordings",
       "Learn HTML , CSS And Javascript",
@@ -54,7 +54,7 @@ const NEW_COURSES = [
       "Understanding How Coding Works",
       "How To Be Job Ready For Portfolio"
     ],
-    href: "/courses/frontend-web-development"
+    href: "https://paystack.com/buy/web-dev-obokyb"
   }
 ];
 
@@ -98,7 +98,7 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, h
       <div className="flex flex-col gap-[36px] w-full">
         {/* YOU WILL LEARN */}
         <div className="flex flex-col gap-[8px] w-full">
-          <p className="font-archivo font-bold text-[10px] text-black/40 tracking-[0.01em] uppercase mb-[2px]">
+          <p className="font-archivo font-bold text-[10px] text-black/40 dark:text-white/40 tracking-[0.01em] uppercase mb-[2px]">
             YOU WILL LEARN
           </p>
           <ul className="flex flex-col gap-[8px] w-full">
@@ -117,7 +117,7 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, h
 
         {/* YOU GRADUATE WITH */}
         <div className="flex flex-col gap-[8px] w-full">
-          <p className="font-archivo font-semibold text-[10px] text-black/40 tracking-[0.01em] uppercase mb-[2px]">
+          <p className="font-archivo font-semibold text-[10px] text-black/40 dark:text-white/40 tracking-[0.01em] uppercase mb-[2px]">
             YOU GRADUATE WITH
           </p>
           <ul className="flex flex-col gap-[8px] w-full">
@@ -135,21 +135,23 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, h
         </div>
       </div>
 
-      <Link 
+      <a
         href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className="mt-auto w-full flex items-center justify-center p-[16px_20px] bg-[#0D0D0D] hover:bg-[#1A1A1A] transition-colors rounded-[15px]"
       >
         <span className="font-archivo font-bold text-[16px] text-white uppercase leading-[17px]">
           REGISTER NOW
         </span>
-      </Link>
+      </a>
     </div>
   </motion.div>
 );
 
 const CoursesSection = () => {
   return (
-    <section className="bg-[#FCF7FB] dark:bg-[#0A0A0A] py-[72px] px-[105px] xl:px-12 md:py-[40px] md:px-[16px]">
+    <section id="courses" className="bg-[#FCF7FB] dark:bg-[#0A0A0A] py-[72px] px-[105px] xl:px-12 md:py-[40px] md:px-[16px]">
       <div className="max-w-[1440px] mx-auto flex flex-col items-center gap-[40px]">
         
         {/* Heading frame */}

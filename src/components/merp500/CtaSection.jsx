@@ -65,7 +65,7 @@ const CtaSection = () => {
           <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }} className="flex gap-4 flex-wrap">
             {/* Frame 33 bg:#141414 w=250 h=66 */}
             <Link
-              href="/courses"
+              href="#courses"
               className="inline-flex items-center justify-center h-[66px] px-8 font-poppins text-[17px] font-bold text-[#f2f2f2] rounded-full transition-colors border border-white/10"
               style={{ background: "#141414", minWidth: "250px" }}
             >

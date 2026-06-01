@@ -93,7 +93,7 @@ const ProcessSection = () => {
             New cohorts is open every month from April to November.
           </p>
           <Link
-            href="/courses"
+            href="#courses"
             className="font-archivo text-[16px] font-bold text-[#671355] dark:text-[#FBD11B] leading-[17px] uppercase underline hover:text-opacity-80 transition-opacity"
           >
             secure your slot
