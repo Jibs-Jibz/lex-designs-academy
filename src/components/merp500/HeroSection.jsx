@@ -108,13 +108,13 @@ const HeroSection = () => {
           <motion.div variants={itemVariants} className="flex flex-col gap-4 md:gap-[32px] w-[473px] md:w-full md:max-w-full">
             <div className="flex gap-[23px] flex-row items-center w-full">
               <Link
-                href="/courses"
+                href="#courses"
                 className="flex-1 h-[48px] shrink-0 bg-[#FBD11B] hover:bg-[#DCC921] text-[#201D1D] font-archivo font-medium text-[16px] md:text-[14px] leading-[15px] uppercase rounded-[32px] transition-colors flex items-center justify-center px-[20px] py-[16px] text-center"
               >
                 JOIN THE COHORT
               </Link>
               <Link
-                href="/courses"
+                href="#courses"
                 className="flex-1 h-[48px] shrink-0 border border-[rgba(226,226,226,0.35)] text-[rgba(237,237,237,0.53)] hover:bg-white/5 font-archivo font-medium text-[16px] md:text-[14px] leading-[15px] uppercase rounded-[32px] transition-colors flex items-center justify-center px-[20px] py-[16px] text-center"
               >
                 BROWSE COURSES

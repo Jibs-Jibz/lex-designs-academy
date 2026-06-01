@@ -82,7 +82,7 @@ const NextCohortSection = () => {
 
           {/* Button */}
           <Link
-            href="/courses"
+            href="#courses"
             className="flex items-center justify-center w-[261px] md:w-[236px] h-[58px] bg-[#FBD11B] border border-[#671355] rounded-[32px] hover:opacity-90 transition-opacity"
           >
             <span className="font-archivo font-bold text-[17px] md:text-[15px] text-white md:text-[#38112F] uppercase tracking-[-0.02em]">
