@@ -12,6 +12,8 @@ export const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-poppins",
+  display: "swap",
+  preload: false,
 })
 
 export const inter = Inter({
@@ -19,12 +21,15 @@ export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: false,
 })
 
 export const manrope = Manrope({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-manrope",
+  display: "swap",
+  preload: false,
 })
 
 export default function App({ Component, pageProps }) {
