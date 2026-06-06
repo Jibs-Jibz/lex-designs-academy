@@ -19,6 +19,10 @@ const cardVariants = {
 
 const NEW_COURSES = [
   {
+    id: "btn-figma-masterclass",
+    contentName: "Figma Masterclass To Pro",
+    value: 50000,
+    currency: "NGN",
     title: "Figma Masterclass To Pro",
     target: "Beginner/ Mid- Level",
     duration: "5 Weeks",
@@ -37,6 +41,10 @@ const NEW_COURSES = [
     ],
   },
   {
+    id: "btn-frontend-dev",
+    contentName: "Front-End Web Development",
+    value: 60000,
+    currency: "NGN",
     title: "Front-End Web Development",
     target: "Beginner/ Mid- Level",
     duration: "4 Weeks",
@@ -56,7 +64,18 @@ const NEW_COURSES = [
   }
 ];
 
-const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, href }) => (
+const CourseCard = ({ id, contentName, value, currency, title, target, duration, price, willLearn, graduateWith, href }) => {
+  const handleRegisterClick = () => {
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "InitiateCheckout", {
+        content_name: contentName,
+        value,
+        currency,
+      });
+    }
+  };
+
+  return (
   <motion.div variants={cardVariants} className="bg-gradient-to-b from-[#FFFFFF] to-[#F7E3F3] dark:from-[#1a1a1a] dark:to-[#1a1a1a] border border-black/10 dark:border-white/10 rounded-[16px] p-[24px_16px] mx-auto w-full max-w-[408px] flex flex-col gap-[36px] h-full shadow-sm">
     {/* Top title */}
     <div className="flex flex-col gap-3 w-full">
@@ -134,9 +153,12 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, h
       </div>
 
       <a
+        id={id}
+        data-course={contentName}
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleRegisterClick}
         className="mt-auto w-full flex items-center justify-center p-[16px_20px] bg-[#0D0D0D] hover:bg-[#1A1A1A] transition-colors rounded-[15px]"
       >
         <span className="font-archivo font-bold text-[16px] text-white uppercase leading-[17px]">
@@ -144,8 +166,9 @@ const CourseCard = ({ title, target, duration, price, willLearn, graduateWith, h
         </span>
       </a>
     </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const CoursesSection = () => {
   const { uiux, webdev } = usePaystackLinks();
